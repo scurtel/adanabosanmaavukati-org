@@ -17,6 +17,7 @@
     "apply:seo": "node scripts/apply-seo-improvements.mjs",
     "strengthen:legacy": "node scripts/strengthen-legacy-links.mjs",
     "fix:ay1-qc": "node scripts/fix-ay1-quality-issues.mjs",
+    "fix:ay1-polish": "node scripts/fix-ay1-polish.mjs",
     "plan:links": "node scripts/internal-link-plan.mjs"
   },
   "engines": {
