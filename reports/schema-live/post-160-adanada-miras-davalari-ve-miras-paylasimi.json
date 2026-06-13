@@ -1,0 +1,36 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Adana Miras Davaları ve Miras Paylaşımı Süreci | Av. Ceren Sümer Cilli",
+    "description": "Adana'da miras davaları, veraset ilamı, miras paylaşımı ve saklı pay süreçleri hakkında genel bilgilendirme rehberi. Somut olay koşullarına göre değerlendirme değişebilir.",
+    "url": "https://adanabosanmaavukati.org/adanada-miras-davalari-ve-miras-paylasimi/",
+    "author": {
+      "@type": "Person",
+      "name": "Av. Ceren Sümer Cilli"
+    },
+    "reviewer": {
+      "@type": "Person",
+      "name": "Av. Ceren Sümer Cilli"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "adanabosanmaavukati.org"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Adana"
+    },
+    "inLanguage": "tr-TR"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "name": "Adana Aile Hukuku Bilgilendirme",
+    "areaServed": "Adana",
+    "provider": {
+      "@type": "Person",
+      "name": "Av. Ceren Sümer Cilli"
+    }
+  }
+]

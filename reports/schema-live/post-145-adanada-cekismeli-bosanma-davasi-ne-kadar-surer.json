@@ -1,0 +1,36 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Adana'da Çekişmeli Boşanma Davası Ne Kadar Sürer? | Süreç ve Deliller",
+    "description": "Adana'da çekişmeli boşanma davası süresi, aşamaları, delillerin ve tanık anlatımlarının önemi hakkında detaylı bilgi edinin. Ortalama dava süresi ve etkileyen faktörler.",
+    "url": "https://adanabosanmaavukati.org/adanada-cekismeli-bosanma-davasi-ne-kadar-surer/",
+    "author": {
+      "@type": "Person",
+      "name": "Av. Ceren Sümer Cilli"
+    },
+    "reviewer": {
+      "@type": "Person",
+      "name": "Av. Ceren Sümer Cilli"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "adanabosanmaavukati.org"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Adana"
+    },
+    "inLanguage": "tr-TR"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "name": "Adana Aile Hukuku Bilgilendirme",
+    "areaServed": "Adana",
+    "provider": {
+      "@type": "Person",
+      "name": "Av. Ceren Sümer Cilli"
+    }
+  }
+]

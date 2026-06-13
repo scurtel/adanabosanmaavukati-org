@@ -1,0 +1,36 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Adana'da Çekişmeli Boşanma Davası Nasıl Açılır? | adanabosanmaavukati.org",
+    "description": "Adana'da çekişmeli boşanma davası açma süreci, delillerin önemi, velayet, nafaka ve tazminat talepleri hakkında detaylı bilgi edinin. Hukuki destek için rehber.",
+    "url": "https://adanabosanmaavukati.org/adana-cekismeli-bosanma-davasi/",
+    "author": {
+      "@type": "Person",
+      "name": "Av. Ceren Sümer Cilli"
+    },
+    "reviewer": {
+      "@type": "Person",
+      "name": "Av. Ceren Sümer Cilli"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "adanabosanmaavukati.org"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Adana"
+    },
+    "inLanguage": "tr-TR"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "name": "Adana Aile Hukuku Bilgilendirme",
+    "areaServed": "Adana",
+    "provider": {
+      "@type": "Person",
+      "name": "Av. Ceren Sümer Cilli"
+    }
+  }
+]

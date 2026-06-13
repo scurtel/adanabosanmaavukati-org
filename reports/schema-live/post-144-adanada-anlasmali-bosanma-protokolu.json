@@ -1,0 +1,36 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Adana Anlaşmalı Boşanma Protokolü Nasıl Hazırlanır? | Av. Ceren Sümer Cilli",
+    "description": "Adana'da anlaşmalı boşanma protokolü hazırlarken nelere dikkat etmeli? Velayet, nafaka, mal paylaşımı gibi temel unsurları ve hukuki süreci öğrenin.",
+    "url": "https://adanabosanmaavukati.org/adanada-anlasmali-bosanma-protokolu/",
+    "author": {
+      "@type": "Person",
+      "name": "Av. Ceren Sümer Cilli"
+    },
+    "reviewer": {
+      "@type": "Person",
+      "name": "Av. Ceren Sümer Cilli"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "adanabosanmaavukati.org"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Adana"
+    },
+    "inLanguage": "tr-TR"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "name": "Adana Aile Hukuku Bilgilendirme",
+    "areaServed": "Adana",
+    "provider": {
+      "@type": "Person",
+      "name": "Av. Ceren Sümer Cilli"
+    }
+  }
+]

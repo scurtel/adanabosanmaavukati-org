@@ -1,0 +1,36 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Velayet Davasında Hakim Neye Karar Verir? 2026 Güncel Kriterler",
+    "description": "Velayet davasında hakim neye karar verir? 2026 güncel kriterler, kritik hatalar ve uygulamada dikkat edilmesi gerekenler. Adana özelinde pratik bilgiler.",
+    "url": "https://adanabosanmaavukati.org/velayet-davasinda-hakim-karar-kriterleri-2026-7191/",
+    "author": {
+      "@type": "Person",
+      "name": "Av. Ceren Sümer Cilli"
+    },
+    "reviewer": {
+      "@type": "Person",
+      "name": "Av. Ceren Sümer Cilli"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "adanabosanmaavukati.org"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Adana"
+    },
+    "inLanguage": "tr-TR"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "name": "Adana Aile Hukuku Bilgilendirme",
+    "areaServed": "Adana",
+    "provider": {
+      "@type": "Person",
+      "name": "Av. Ceren Sümer Cilli"
+    }
+  }
+]

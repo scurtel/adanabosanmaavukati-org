@@ -14,6 +14,8 @@
     "enhance:publish": "node scripts/enhance-and-publish-drafts.mjs",
     "create:3seo": "node scripts/create-3-seo-articles.mjs",
     "publish:3seo": "node scripts/publish-3-seo-drafts.mjs",
+    "apply:seo": "node scripts/apply-seo-improvements.mjs",
+    "strengthen:legacy": "node scripts/strengthen-legacy-links.mjs",
     "plan:links": "node scripts/internal-link-plan.mjs"
   },
   "engines": {

@@ -1,0 +1,36 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Adana'da Boşanma Davası Nasıl Açılır? Adım Adım Rehber | Av. Ceren Sümer Cilli",
+    "description": "Adana'da boşanma davası açmayı düşünenler için kapsamlı rehber. Süreç, türler, delil toplama, velayet, nafaka ve mal paylaşımı hakkında bilgi edinin.",
+    "url": "https://adanabosanmaavukati.org/adanada-bosanma-davasi-nasil-acilir/",
+    "author": {
+      "@type": "Person",
+      "name": "Av. Ceren Sümer Cilli"
+    },
+    "reviewer": {
+      "@type": "Person",
+      "name": "Av. Ceren Sümer Cilli"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "adanabosanmaavukati.org"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Adana"
+    },
+    "inLanguage": "tr-TR"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "name": "Adana Aile Hukuku Bilgilendirme",
+    "areaServed": "Adana",
+    "provider": {
+      "@type": "Person",
+      "name": "Av. Ceren Sümer Cilli"
+    }
+  }
+]
