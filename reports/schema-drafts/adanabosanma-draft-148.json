@@ -1,0 +1,114 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Boşanmada Mal Paylaşımı ve Katılma Alacağı Hesaplama Rehberi",
+    "description": "Boşanmada mal paylaşımı, edinilmiş mallar, kişisel mallar, değer artış payı ve katılma alacağı hesaplaması hakkında detaylı bilgi edinin. Adana'da hukuki destek.",
+    "url": "https://adanabosanmaavukati.org/bosanmada-mal-paylasimi-ve-katilma-alacagi/",
+    "author": {
+      "@type": "Person",
+      "name": "Av. Ceren Sümer Cilli"
+    },
+    "reviewer": {
+      "@type": "Person",
+      "name": "Av. Ceren Sümer Cilli"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "adanabosanmaavukati.org"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Adana"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "Mal Rejimi Tasfiyesi"
+      },
+      {
+        "@type": "Thing",
+        "name": "Katılma Alacağı"
+      },
+      {
+        "@type": "Thing",
+        "name": "Edinilmiş Mallar"
+      },
+      {
+        "@type": "Thing",
+        "name": "Kişisel Mallar"
+      },
+      {
+        "@type": "Thing",
+        "name": "Değer Artış Payı"
+      },
+      {
+        "@type": "Thing",
+        "name": "Boşanma Hukuku"
+      },
+      {
+        "@type": "Thing",
+        "name": "Türk Medeni Kanunu"
+      },
+      {
+        "@type": "Thing",
+        "name": "Adana Aile Mahkemeleri"
+      }
+    ],
+    "inLanguage": "tr-TR"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Evlilik öncesi alınan mallar mal paylaşımına dahil edilir mi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Hayır, evlilik öncesinde edinilen mallar kişisel mal kabul edilir ve mal paylaşımına (katılma alacağı hesabına) dahil edilmez. Ancak, bu malların evlilik birliği içinde değer kazanmasına diğer eşin katkısı varsa, değer artış payı alacağı talep edilebilir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Miras kalan mallar boşanmada paylaşılır mı?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Hayır, miras yoluyla edinilen mallar da kişisel mal niteliğindedir ve boşanmada mal paylaşımına tabi değildir. Ancak, miras kalan malın gelirleri (örneğin kira geliri) edinilmiş mal kabul edilir ve katılma alacağı hesabına dahil edilir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Katılma alacağı davası açmak için boşanmanın kesinleşmesi şart mı?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Evet, kural olarak katılma alacağı davası, boşanma davasının kesinleşmesinden sonra açılır. Ancak, boşanma davası ile birlikte de mal rejiminin tasfiyesi talebinde bulunulabilir. Mahkeme, boşanma kararının kesinleşmesini bekleyerek mal rejiminin tasfiyesine ilişkin kararını verir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Eşim mallarını kaçırırsa ne yapabilirim?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Eşin mal kaçırma ihtimali varsa, boşanma davası açılmadan önce veya dava ile birlikte mahkemeden ihtiyati tedbir kararı talep edilebilir. Bu tedbir kararı ile malların üçüncü kişilere devri veya satışı önlenebilir. Bu tür durumlarda hızlı ve etkili hukuki destek almak çok önemlidir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Mal paylaşımı davası ne kadar sürer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Mal paylaşımı davalarının süresi, davanın karmaşıklığına, delillerin toplanma hızına, bilirkişi incelemelerinin yapılıp yapılmadığına ve mahkemelerin iş yüküne göre değişiklik gösterir. Basit bir dava birkaç ayda sonuçlanabilirken, karmaşık ve çok sayıda mal varlığının olduğu davalar yıllarca sürebilir. Doğru bir zaman tahmini için somut olayın detaylı bir hukuki değerlendirmesi gereklidir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Nafaka ve velayet gibi diğer boşanma konuları hakkında bilgi almak için nereye başvurabilirim?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nafaka ve velayet gibi diğer boşanma konuları hakkında bilgi almak için ilgili hukuki kaynakları ve uzman avukatları inceleyebilirsiniz. Her iki konuda da uzman hukuki destek almak, haklarınızın korunması açısından büyük önem taşır."
+        }
+      }
+    ]
+  }
+]

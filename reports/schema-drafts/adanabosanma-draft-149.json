@@ -1,0 +1,114 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Adana Uzaklaştırma Kararı: 6284 Sayılı Kanun Kapsamında Rehber",
+    "description": "Adana'da uzaklaştırma kararı almak için adım adım rehber. 6284 sayılı Kanun ile koruyucu tedbirler, başvuru süreci, haklarınız ve hukuki destek hakkında bilgi edinin.",
+    "url": "https://adanabosanmaavukati.org/adanada-uzaklastirma-karari-nasil-alinir/",
+    "author": {
+      "@type": "Person",
+      "name": "Av. Ceren Sümer Cilli"
+    },
+    "reviewer": {
+      "@type": "Person",
+      "name": "Av. Ceren Sümer Cilli"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "adanabosanmaavukati.org"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Adana"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "6284 Sayılı Kanun"
+      },
+      {
+        "@type": "Thing",
+        "name": "Uzaklaştırma Kararı"
+      },
+      {
+        "@type": "Thing",
+        "name": "Aile İçi Şiddet"
+      },
+      {
+        "@type": "Thing",
+        "name": "Koruma Tedbirleri"
+      },
+      {
+        "@type": "Thing",
+        "name": "Adana Aile Mahkemesi"
+      },
+      {
+        "@type": "Thing",
+        "name": "Şiddet Mağduru Hakları"
+      },
+      {
+        "@type": "Thing",
+        "name": "Zorlama Hapsi"
+      },
+      {
+        "@type": "Thing",
+        "name": "Hukuki Destek"
+      }
+    ],
+    "inLanguage": "tr-TR"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Uzaklaştırma kararı için delil şart mı?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Hayır, 6284 sayılı Kanun kapsamında uzaklaştırma kararı almak için somut delil sunma zorunluluğu yoktur. Şiddet mağdurunun beyanı, kararın alınması için yeterli kabul edilebilir. Ancak varsa darp raporu, fotoğraf, mesajlaşma kayıtları gibi deliller sürecin hızlanmasına ve kararın daha sağlam temellere oturmasına yardımcı olabilir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Uzaklaştırma kararı ne kadar sürede çıkar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "6284 sayılı Kanun, bu tür kararların hızlı bir şekilde alınmasını öngörür. Genellikle başvuru yapıldıktan sonra aynı gün veya en geç birkaç gün içinde karar verilir. Acil durumlarda, kolluk kuvvetleri tarafından geçici koruma tedbirleri de derhal alınabilir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Uzaklaştırma kararına itiraz edilebilir mi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Evet, uzaklaştırma kararı verilen kişi, kararın kendisine tebliğinden itibaren iki hafta içinde kararı veren mahkemeye itiraz edebilir. İtirazı inceleyen mahkeme (genellikle bir üst mahkeme veya itiraz mercii), kararın yerinde olup olmadığını değerlendirir ve bir karar verir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Mağdurun çocukları varsa süreç nasıl işler?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Eğer şiddet mağdurunun çocukları varsa, çocuklar da 6284 sayılı Kanun kapsamında korunur. Uzaklaştırma kararı, çocukların da şiddet uygulayan kişiyle iletişim kurmasını, yaklaşmasını engelleyebilir. Ayrıca, mahkeme çocukların velayet davasında çocuğun üstün yararı ilkesini gözeterek geçici tedbirler alabilir ve çocukların güvenli bir ortamda yaşamalarını sağlamak adına gerekli barınma, kreş gibi koruyucu tedbirleri de karara ekleyebilir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Uzaklaştırma kararı sadece fiziksel şiddet durumlarında mı alınır?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Hayır, 6284 sayılı Kanun sadece fiziksel şiddeti değil; cinsel, psikolojik, ekonomik ve sözlü şiddet gibi farklı şiddet türlerini de kapsar. Her türlü şiddet veya şiddet tehdidi durumunda uzaklaştırma kararı talep edilebilir. Önemli olan, kişinin can güvenliğinin veya psikolojik bütünlüğünün tehlikede olmasıdır."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Uzaklaştırma kararı talep eden kişinin masraf ödemesi gerekir mi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "6284 sayılı Kanun kapsamında yapılan başvurular harçtan muaftır. Yani, uzaklaştırma kararı talep eden kişiden başvuru için herhangi bir mahkeme harcı veya masrafı alınmaz. Ancak, bir avukat aracılığıyla süreç yürütülüyorsa, avukatlık ücreti söz konusu olacaktır."
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Adana'da Çekişmeli Boşanma Davası Nasıl Açılır? | adanabosanmaavukati.org",
+    "description": "Adana'da çekişmeli boşanma davası açma süreci, delillerin önemi, velayet, nafaka ve tazminat talepleri hakkında detaylı bilgi edinin. Hukuki destek için rehber.",
+    "url": "https://adanabosanmaavukati.org/adana-cekismeli-bosanma-davasi/",
+    "author": {
+      "@type": "Person",
+      "name": "Av. Ceren Sümer Cilli"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "adanabosanmaavukati.org"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Adana"
+    },
+    "inLanguage": "tr-TR"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "name": "Adana Hukuki Bilgilendirme",
+    "areaServed": "Adana",
+    "provider": {
+      "@type": "Person",
+      "name": "Av. Ceren Sümer Cilli"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Çekişmeli boşanma davası ne kadar sürer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Çekişmeli boşanma davalarının süresi, davanın karmaşıklığına, delil toplama sürecine, tanık sayısına, mahkemenin iş yüküne ve tarafların kanun yollarına başvurup başvurmamasına göre değişiklik gösterir. Genellikle bir çekişmeli boşanma davası ilk derece mahkemesinde 1 ila 3 yıl arasında sürebilir. İstinaf ve temyiz süreçleri de eklendiğinde bu süre daha da uzayabilir. Detaylı bilgi için Adana'da Çekişmeli Boşanma Davası Ne Kadar Sürer? başlıklı makalemizi okuyabilirsiniz."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Boşanma davasında deliller neler olabilir?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Boşanma davasında delil olarak her türlü hukuka uygun belge, tanık beyanı, fotoğraf, video kaydı, ses kaydı, banka kayıtları, sosyal medya yazışmaları (WhatsApp, SMS vb.), otel kayıtları, polis tutanakları, doktor raporları ve bilirkişi incelemeleri kullanılabilir. Önemli olan, delillerin hukuka uygun yollarla elde edilmiş olmasıdır. Hukuka aykırı yollarla elde edilen deliller mahkeme tarafından dikkate alınmayabilir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Velayet kime verilir?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Velayet, boşanma davasında çocuğun üstün yararı ilkesi esas alınarak belirlenir. Mahkeme, çocuğun yaşı, cinsiyeti, eğitim durumu, anne ve babanın ekonomik ve sosyal koşulları, çocuğun kiminle daha iyi bir yaşam süreceği, ebeveynlerin çocukla olan ilişkileri gibi birçok faktörü değerlendirir. Çocuğun yaşına ve idrak gücüne göre kendi görüşleri de alınabilir. Velayet genellikle annenin veya babanın tek başına kullanımına verilebileceği gibi, son yıllarda ortak velayet kararları da verilmektedir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Nafaka miktarı nasıl belirlenir?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nafaka miktarı, talep eden tarafın ihtiyaçları ile nafaka ödeyecek tarafın ödeme gücü dikkate alınarak belirlenir. Yoksulluk nafakası için tarafların sosyal ve ekonomik durumları, yaşam standartları; iştirak nafakası için ise çocuğun eğitim, sağlık, barınma, giyim gibi temel ihtiyaçları göz önünde bulundurulur. Mahkeme, tarafların gelir ve giderlerini, mal varlıklarını ve diğer tüm ilgili faktörleri değerlendirerek hakkaniyete uygun bir nafaka miktarına hükmeder."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Boşanma davası açmak için evlilikte ne kadar süre geçmeli?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Türk Medeni Kanunu'na göre, boşanma davası açmak için evlilikte belirli bir süre geçmiş olması şartı yoktur. Evliliğin hemen başında dahi boşanma nedenlerinin ortaya çıkması halinde dava açılabilir. Ancak, anlaşmalı boşanma davası açabilmek için evliliğin en az bir yıl sürmüş olması şartı aranır. Çekişmeli boşanma için böyle bir süre kısıtlaması bulunmamaktadır."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Adana'da boşanma avukatı seçerken nelere dikkat etmeliyim?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Adana'da boşanma avukatı seçerken, avukatın aile hukuku alanındaki tecrübesi, davalara yaklaşımı, iletişim becerileri ve müvekkil odaklı çalışma prensibi önemlidir. Avukatın, sürecin duygusal ve hukuki boyutlarını iyi anlaması, müvekkilini doğru bilgilendirmesi ve gerçekçi beklentiler oluşturması gerekir. Ayrıca, avukatın Adana'daki yerel mahkeme pratiklerine hakim olması da dava sürecini olumlu etkileyebilir."
+        }
+      }
+    ]
+  }
+]

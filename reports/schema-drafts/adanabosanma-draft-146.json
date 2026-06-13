@@ -1,0 +1,106 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Adana'da Nafaka Davası ve Nafaka Artırım Süreci | Av. Ceren Sümer Cilli",
+    "description": "Adana'da nafaka davası nasıl açılır, nafaka türleri nelerdir ve nafaka artırım süreci nasıl işler? Tedbir, iştirak, yoksulluk nafakası hakkında kapsamlı rehber. Hukuki destek alın.",
+    "url": "https://adanabosanmaavukati.org/adanada-nafaka-davasi-ve-nafaka-artirim-sureci/",
+    "author": {
+      "@type": "Person",
+      "name": "Av. Ceren Sümer Cilli"
+    },
+    "reviewer": {
+      "@type": "Person",
+      "name": "Av. Ceren Sümer Cilli"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "adanabosanmaavukati.org"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Adana"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "Nafaka Davası"
+      },
+      {
+        "@type": "Thing",
+        "name": "Nafaka Artırımı"
+      },
+      {
+        "@type": "Thing",
+        "name": "Tedbir Nafakası"
+      },
+      {
+        "@type": "Thing",
+        "name": "İştirak Nafakası"
+      },
+      {
+        "@type": "Thing",
+        "name": "Yoksulluk Nafakası"
+      },
+      {
+        "@type": "Thing",
+        "name": "Aile Hukuku Adana"
+      },
+      {
+        "@type": "Thing",
+        "name": "Boşanma Hukuku"
+      },
+      {
+        "@type": "Thing",
+        "name": "Adana Aile Mahkemesi"
+      }
+    ],
+    "inLanguage": "tr-TR"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Nafaka ne kadar süreyle ödenir?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tedbir nafakası boşanma davası kesinleşene kadar, iştirak nafakası çocuğun ergin olmasına kadar (eğitimine devam ediyorsa yardım nafakası olarak devam edebilir), yoksulluk nafakası ise kural olarak süresizdir. Ancak, yoksulluk nafakası alan kişinin yeniden evlenmesi, fiilen evli gibi yaşaması veya yoksulluk durumunun ortadan kalkması gibi durumlarda sona erebilir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Nafaka ödemezsem ne olur?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nafaka ödeme yükümlülüğünü yerine getirmeyen kişi hakkında icra takibi başlatılabilir. Ayrıca, nafaka borcunu ödemeyen kişi hakkında şikayet üzerine İcra Ceza Mahkemesi'nde \"nafaka borcunu ödememek\" suçundan tazyik hapsi kararı verilebilir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Nafaka artırım davası ne zaman açılabilir?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nafaka artırım davası için belirli bir zaman sınırı yoktur. Ancak, nafakanın belirlendiği tarihten itibaren ekonomik koşullarda veya tarafların/çocuğun ihtiyaçlarında önemli ve kalıcı bir değişiklik meydana gelmesi gerekmektedir. Genellikle, nafaka bağlandıktan veya son artırım kararından itibaren en az bir yıl geçmiş olması beklenir, ancak bu kesin bir kural değildir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Nafaka artırım davasında ne tür deliller gerekir?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nafaka artırım davasında, nafakanın yetersiz kaldığını veya ödeme gücünün arttığını gösteren her türlü belge delil olarak sunulabilir. Bunlar arasında güncel gelir belgeleri (maaş bordrosu, vergi beyannamesi), artan giderlere ilişkin faturalar (kira, elektrik, su, doğal gaz, eğitim, sağlık), banka hesap dökümleri ve tanık ifadeleri yer alabilir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Nafaka nasıl kaldırılır veya azaltılır?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nafaka yükümlüsü, nafaka alacaklısının yoksulluk durumunun ortadan kalktığını, evlendiğini, fiilen evli gibi yaşadığını veya kendi ekonomik durumunun kötüleştiğini ispat ederek nafakanın kaldırılması veya azaltılması için dava açabilir. Bu davalar da Aile Mahkemeleri'nde görülür."
+        }
+      }
+    ]
+  }
+]

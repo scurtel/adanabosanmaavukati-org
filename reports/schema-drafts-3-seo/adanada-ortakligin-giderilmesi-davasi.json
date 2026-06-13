@@ -1,0 +1,78 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Adana Ortaklığın Giderilmesi Davası: İzale-i Şuyu Süreci",
+    "description": "Adana'da ortaklığın giderilmesi (izale-i şuyu) davası nasıl açılır? Hisseli taşınmazlarda aynen taksim veya satış yoluyla ortaklığın giderilmesi süreci hakkında detaylı bilgi.",
+    "url": "https://adanabosanmaavukati.org/adanada-ortakligin-giderilmesi-davasi/",
+    "author": {
+      "@type": "Person",
+      "name": "Av. Ceren Sümer Cilli"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "adanabosanmaavukati.org"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Adana"
+    },
+    "inLanguage": "tr-TR"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "name": "Adana Hukuki Bilgilendirme",
+    "areaServed": "Adana",
+    "provider": {
+      "@type": "Person",
+      "name": "Av. Ceren Sümer Cilli"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Ortaklığın giderilmesi davası ne kadar sürer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Davanın süresi, taşınmazın niteliği, ortak sayısı, bilirkişi incelemesinin karmaşıklığı, tarafların itirazları ve mahkemenin iş yüküne göre değişiklik gösterir. Genellikle 1 ila 3 yıl arasında sürebilir, ancak daha uzun süren davalar da mevcuttur."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ortaklığın giderilmesi davası masrafları kime aittir?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Dava masrafları (harçlar, bilirkişi ücretleri, tebligat giderleri vb.) başlangıçta davacı tarafından karşılanır. Ancak davanın sonunda mahkeme, bu masrafları ortakların payları oranında dağıtılmasına karar verir. Yani, her ortak kendi payına düşen masraftan sorumludur."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ortaklardan biri davaya katılmazsa ne olur?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ortaklığın giderilmesi davasında tüm ortakların davada yer alması zorunludur. Eğer bir ortak davaya katılmazsa veya adresi tespit edilemezse, mahkeme gerekli araştırmaları yapar ve tebligatın usulüne uygun yapılmasını sağlar. Katılmayan ortağın yokluğunda da dava devam eder ve mahkeme kararını verir. Karar, katılmayan ortak için de bağlayıcıdır."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ortaklığın giderilmesi davasında satış bedeli nasıl belirlenir?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Satış bedeli, mahkemece görevlendirilen bilirkişiler tarafından taşınmazın güncel piyasa değeri üzerinden belirlenir. Bilirkişi raporu, taşınmazın konumu, imar durumu, yüzölçümü, üzerindeki yapılar ve emsal satışlar gibi faktörleri dikkate alarak bir değer biçer. İhale sürecinde ise, bu belirlenen değer üzerinden açık artırma yapılır ve en yüksek teklif veren kişiye satılır."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ortaklığın giderilmesi davası açmak için tüm ortakların rızası gerekli midir?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Hayır, ortaklığın giderilmesi davası açmak için tüm ortakların rızası gerekmez. Türk Medeni Kanunu'na göre, her paydaş tek başına ortaklığın giderilmesini talep etme hakkına sahiptir. Ortaklardan birinin bu yöndeki talebi, davanın açılması için yeterlidir."
+        }
+      }
+    ]
+  }
+]

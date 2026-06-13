@@ -1,0 +1,106 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Adana Anlaşmalı Boşanma Protokolü Nasıl Hazırlanır? | Av. Ceren Sümer Cilli",
+    "description": "Adana'da anlaşmalı boşanma protokolü hazırlarken nelere dikkat etmeli? Velayet, nafaka, mal paylaşımı gibi temel unsurları ve hukuki süreci öğrenin.",
+    "url": "https://adanabosanmaavukati.org/adanada-anlasmali-bosanma-protokolu/",
+    "author": {
+      "@type": "Person",
+      "name": "Av. Ceren Sümer Cilli"
+    },
+    "reviewer": {
+      "@type": "Person",
+      "name": "Av. Ceren Sümer Cilli"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "adanabosanmaavukati.org"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Adana"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "Anlaşmalı Boşanma Protokolü"
+      },
+      {
+        "@type": "Thing",
+        "name": "Adana Aile Mahkemesi"
+      },
+      {
+        "@type": "Thing",
+        "name": "Velayet Düzenlemesi"
+      },
+      {
+        "@type": "Thing",
+        "name": "Nafaka Türleri"
+      },
+      {
+        "@type": "Thing",
+        "name": "Mal Paylaşımı"
+      },
+      {
+        "@type": "Thing",
+        "name": "Maddi ve Manevi Tazminat"
+      },
+      {
+        "@type": "Thing",
+        "name": "Boşanma Süreci"
+      },
+      {
+        "@type": "Thing",
+        "name": "Türk Medeni Kanunu"
+      }
+    ],
+    "inLanguage": "tr-TR"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Anlaşmalı boşanma protokolü olmadan boşanabilir miyiz?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Hayır, anlaşmalı boşanma davasının temel şartlarından biri, eşlerin boşanmanın tüm sonuçları üzerinde yazılı bir protokol ile anlaşmış olmasıdır. Bu protokol olmadan anlaşmalı boşanma mümkün değildir ve dava çekişmeli boşanmaya dönüşebilir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hakim, hazırladığımız protokolü onaylamazsa ne olur?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Hakim, protokolü çocukların veya boşanma yüzünden yoksulluğa düşecek eşin menfaatlerine aykırı bulursa onaylamayabilir. Bu durumda hakim, taraflara protokolde değişiklik yapmaları için süre verir. Eğer taraflar hakimin önerileri doğrultusunda değişiklik yapıp uzlaşamazlarsa, dava çekişmeli boşanma davasına dönüşebilir ve süreç uzayabilir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Anlaşmalı boşanma protokolünde sonradan değişiklik yapılabilir mi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Boşanma davası kesinleştikten sonra protokolde yer alan velayet ve iştirak nafakası gibi konular, değişen koşullar nedeniyle (çocuğun menfaati, tarafların maddi durumundaki değişiklik vb.) yeni bir dava ile değiştirilebilir. Ancak yoksulluk nafakası, maddi/manevi tazminat ve mal paylaşımı gibi konularda yapılan anlaşmalar genellikle kesin niteliktedir ve sonradan değiştirilmesi çok zordur, hukuki danışmanlık almak önemlidir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Anlaşmalı boşanma davası ne kadar sürer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Anlaşmalı boşanma davaları, protokolün eksiksiz ve yasalara uygun olması halinde genellikle tek celsede sonuçlanır. Dava açıldıktan sonra duruşma günü genellikle 1-3 ay içinde verilir. Kararın kesinleşmesi ise tebligat süreçlerine bağlı olarak birkaç hafta daha sürebilir. Adana Aile Mahkemeleri'nde bu süreler benzer şekilde işlemektedir, ancak adliyenin iş yüküne göre değişiklik gösterebilir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Çocukların velayeti konusunda anlaşamazsak ne olur?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Eğer velayet konusunda eşler arasında uzlaşma sağlanamazsa, anlaşmalı boşanma şartı ortadan kalkar. Bu durumda dava, çekişmeli boşanma davası olarak devam eder ve velayet konusunda karar verme yetkisi hakime geçer. Hakim, çocuğun üstün menfaatini gözeterek velayet konusunda karar verir ve bu süreç daha uzun sürebilir."
+        }
+      }
+    ]
+  }
+]

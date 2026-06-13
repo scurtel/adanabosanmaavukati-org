@@ -1,0 +1,22 @@
+{
+  "name": "adanabosanmaavukati-org",
+  "version": "1.0.0",
+  "private": true,
+  "description": "adanabosanmaavukati.org WordPress SEO ve entity yönetim araçları",
+  "type": "module",
+  "scripts": {
+    "check:wp": "node scripts/check-wp-connection.mjs",
+    "check:gemini": "node scripts/check-gemini.mjs",
+    "fetch:wp": "node scripts/fetch-wp-content.mjs",
+    "analyze:divorce": "node scripts/analyze-divorce-seo-entity.mjs",
+    "generate:divorce": "node scripts/generate-divorce-authority-content-with-gemini.mjs",
+    "draft:wp": "node scripts/create-wp-drafts.mjs",
+    "enhance:publish": "node scripts/enhance-and-publish-drafts.mjs",
+    "create:3seo": "node scripts/create-3-seo-articles.mjs",
+    "publish:3seo": "node scripts/publish-3-seo-drafts.mjs",
+    "plan:links": "node scripts/internal-link-plan.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

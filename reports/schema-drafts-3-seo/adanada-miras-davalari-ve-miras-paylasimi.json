@@ -1,0 +1,86 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Adana Miras Davaları ve Miras Paylaşımı Süreci | Av. Ceren Sümer Cilli",
+    "description": "Adana'da miras davaları, veraset ilamı, miras paylaşımı ve saklı pay süreçleri hakkında detaylı bilgi edinin. Av. Ceren Sümer Cilli'den Adana miras hukuku danışmanlığı alın.",
+    "url": "https://adanabosanmaavukati.org/adanada-miras-davalari-ve-miras-paylasimi/",
+    "author": {
+      "@type": "Person",
+      "name": "Av. Ceren Sümer Cilli"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "adanabosanmaavukati.org"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Adana"
+    },
+    "inLanguage": "tr-TR"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "name": "Adana Hukuki Bilgilendirme",
+    "areaServed": "Adana",
+    "provider": {
+      "@type": "Person",
+      "name": "Av. Ceren Sümer Cilli"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Adana'da veraset ilamı (mirasçılık belgesi) nasıl alınır?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Adana'da veraset ilamı, mirasçılar arasında anlaşmazlık yoksa noterden, anlaşmazlık varsa veya belirli özel durumlar söz konusu ise Adana Sulh Hukuk Mahkemeleri'nden talep edilerek alınır."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Miras paylaşımı sürecinde mirasçılar anlaşamazsa ne olur?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Mirasçılar arasında anlaşma sağlanamazsa, mirasın paylaşımı için Adana Sulh Hukuk Mahkemeleri'nde \"ortaklığın giderilmesi davası\" açılabilir. Mahkeme, malın aynen taksimine veya satış yoluyla paraya çevrilmesine karar verir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Saklı pay nedir ve miras bırakan bunu ihlal edebilir mi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Saklı pay, yasal mirasçıların (altsoy, anne-baba, sağ kalan eş) kanunen korunan asgari miras payıdır. Miras bırakan vasiyetname ile bu payı ihlal ederse, saklı pay sahibi mirasçılar tenkis davası açarak haklarını talep edebilirler."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Miras davalarında hangi belgelere ihtiyaç duyulur?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Miras bırakanın ölüm belgesi, veraset ilamı, tapu kayıtları, banka hesap dökümleri, varsa vasiyetname ve nüfus kayıt örnekleri gibi belgeler miras davalarında temel olarak gereklidir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Adana'da miras hukuku alanında neden avukat desteği almalıyım?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Miras hukuku karmaşık bir alandır ve Adana'daki miras davaları, doğru hukuki adımların atılmasını, hak kayıplarının önlenmesini ve sürecin hızlı ve adil ilerlemesini gerektirir. Av. Ceren Sümer Cilli gibi uzman bir avukat, bu süreçte size rehberlik eder."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ortaklığın giderilmesi davası (izale-i şüyu) ne anlama gelir?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ortaklığın giderilmesi davası, miras kalan taşınmaz veya diğer mallar üzerindeki mirasçıların ortaklığını sona erdirmek için açılan bir davadır. Bu dava sonucunda mal, ya mirasçılar arasında aynen bölünür ya da satılarak bedeli paylaştırılır."
+        }
+      }
+    ]
+  }
+]

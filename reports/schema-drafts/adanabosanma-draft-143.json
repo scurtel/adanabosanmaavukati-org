@@ -1,0 +1,110 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Adana'da Boşanma Davası Nasıl Açılır? Adım Adım Rehber | Av. Ceren Sümer Cilli",
+    "description": "Adana'da boşanma davası açmayı düşünenler için kapsamlı rehber. Süreç, türler, delil toplama, velayet, nafaka ve mal paylaşımı hakkında bilgi edinin.",
+    "url": "https://adanabosanmaavukati.org/adanada-bosanma-davasi-nasil-acilir/",
+    "author": {
+      "@type": "Person",
+      "name": "Av. Ceren Sümer Cilli"
+    },
+    "reviewer": {
+      "@type": "Person",
+      "name": "Av. Ceren Sümer Cilli"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "adanabosanmaavukati.org"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Adana"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "Boşanma Davası"
+      },
+      {
+        "@type": "Thing",
+        "name": "Adana Aile Mahkemesi"
+      },
+      {
+        "@type": "Thing",
+        "name": "Anlaşmalı Boşanma"
+      },
+      {
+        "@type": "Thing",
+        "name": "Çekişmeli Boşanma"
+      },
+      {
+        "@type": "Thing",
+        "name": "Nafaka"
+      },
+      {
+        "@type": "Thing",
+        "name": "Velayet"
+      },
+      {
+        "@type": "Thing",
+        "name": "Mal Paylaşımı"
+      },
+      {
+        "@type": "Thing",
+        "name": "Hukuki Danışmanlık"
+      },
+      {
+        "@type": "Thing",
+        "name": "Delil Toplama"
+      }
+    ],
+    "inLanguage": "tr-TR"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Adana'da boşanma davası ne kadar sürer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Boşanma davasının süresi, anlaşmalı veya çekişmeli olmasına göre değişir. Anlaşmalı davalar birkaç hafta ila birkaç ay sürerken, çekişmeli davalar delil toplama ve temyiz süreçleri nedeniyle 1-3 yıl veya daha uzun sürebilir. Mahkemenin iş yükü ve tarafların tutumu süreyi etkiler."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Boşanma davasında avukat tutmak zorunlu mu?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Boşanma davası açmak için avukat tutma zorunluluğu yoktur. Ancak, hukuki süreçlerin karmaşıklığı ve hak kaybı riskini önlemek adına profesyonel hukuki destek almak şiddetle tavsiye edilir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Boşanma davasında mal paylaşımı nasıl yapılır?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Türk Medeni Kanunu'na göre, evlilik birliği içinde edinilen mallar \"edinilmiş mallara katılma rejimi\" kapsamında değerlendirilir. Boşanma halinde, edinilmiş malların değeri üzerinden her eşin yarı yarıya katılma alacağı hakkı bulunur. Bu süreç genellikle bilirkişi incelemesi gerektirir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Çocukların velayeti kime verilir?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Mahkeme, çocukların velayeti konusunda çocuğun üstün menfaatini gözeterek karar verir. Çocuğun yaşı, cinsiyeti, eğitim durumu, ebeveynlerin yaşam koşulları ve belli bir yaştan sonra çocuğun kendi görüşü gibi faktörler değerlendirilir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Boşanma davasında deliller nasıl toplanır ve sunulur?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Boşanma davasında deliller, davanın türüne ve ileri sürülen boşanma sebebine göre değişir. Tanık beyanları, mesajlaşma kayıtları, sosyal medya paylaşımları, fotoğraf, video, banka dekontları ve sağlık raporları gibi yasal deliller kullanılabilir. Delillerin hukuka uygun yollarla toplanması ve dilekçeler teatisi aşamasında mahkemeye sunulması önemlidir. Hukuka aykırı yollarla elde edilen deliller mahkeme tarafından dikkate alınmayabilir."
+        }
+      }
+    ]
+  }
+]

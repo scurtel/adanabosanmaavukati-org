@@ -1,0 +1,114 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Adana Velayet Davası: Çocuğun Üstün Yararı ve Uygulama",
+    "description": "Adana'da velayet davalarında çocuğun üstün yararı ilkesinin kapsamını, mahkemelerin değerlendirdiği kriterleri ve hukuki süreçleri bu rehberde keşfedin.",
+    "url": "https://adanabosanmaavukati.org/adanada-velayet-davasinda-cocugun-ustun-yarari/",
+    "author": {
+      "@type": "Person",
+      "name": "Av. Ceren Sümer Cilli"
+    },
+    "reviewer": {
+      "@type": "Person",
+      "name": "Av. Ceren Sümer Cilli"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "adanabosanmaavukati.org"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Adana"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "Velayet Davası"
+      },
+      {
+        "@type": "Thing",
+        "name": "Çocuğun Üstün Yararı İlkesi"
+      },
+      {
+        "@type": "Thing",
+        "name": "Adana Aile Mahkemeleri"
+      },
+      {
+        "@type": "Thing",
+        "name": "Türk Medeni Kanunu"
+      },
+      {
+        "@type": "Thing",
+        "name": "Boşanma Hukuku"
+      },
+      {
+        "@type": "Thing",
+        "name": "Müşterek Velayet"
+      },
+      {
+        "@type": "Thing",
+        "name": "Velayetin Değiştirilmesi"
+      },
+      {
+        "@type": "Thing",
+        "name": "Çocuk Hakları Sözleşmesi"
+      }
+    ],
+    "inLanguage": "tr-TR"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "1. Velayet kime verilirken çocuğun yaşı önemli midir?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Evet, çocuğun yaşı velayet kararı verilirken önemli bir kriterdir. Özellikle anne bakım ve şefkatine muhtaç küçük yaştaki çocuklarda (genellikle 0-7 yaş aralığı), anneye velayet verilmesi eğilimi daha güçlüdür. Ancak bu mutlak bir kural değildir; çocuğun bireysel ihtiyaçları, annenin veya babanın çocuğa göstereceği ilgi, yaşam koşulları gibi diğer faktörler de birlikte değerlendirilir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "2. Çocuk velayet davasında dinlenir mi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Evet, Türk Medeni Kanunu'na göre idrak çağındaki çocuğun velayet konusundaki görüşü alınmalıdır. Çocuğun yaşına ve olgunluğuna göre, mahkeme çocuğun görüşünü doğrudan veya pedagog/psikolog gibi uzmanlar aracılığıyla alabilir. Çocuğun görüşü, mahkeme kararında önemli bir etkiye sahip olabilir ancak tek başına belirleyici değildir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "3. Velayet kararı kesin midir, sonradan değiştirilebilir mi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Velayet kararı kesin değildir ve koşulların değişmesi halinde sonradan değiştirilebilir. Velayet sahibi ebeveynin yaşam koşullarında önemli değişiklikler olması, çocuğun menfaatlerinin tehlikeye girmesi veya velayet sahibinin çocuğa karşı yükümlülüklerini yerine getirmemesi gibi durumlarda velayetin değiştirilmesi davası açılabilir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "4. Müşterek velayet Türkiye'de uygulanıyor mu?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Evet, Türkiye'de boşanma kararıyla birlikte müşterek velayet (ortak velayet) kararı verilmesi mümkündür. 2016 yılında Yargıtay'ın bu yöndeki kararlarıyla birlikte, boşanma durumunda da anne ve babanın müşterek velayeti talep etmesi ve çocuğun üstün yararına uygun bulunması halinde mahkemeler müşterek velayete karar verebilmektedir. Bu durumda ebeveynler, velayet sorumluluklarını birlikte yerine getirirler ve bu durum genellikle anlaşmalı boşanma protokollerinde detaylandırılır."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "5. Velayet davası ne kadar sürer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Velayet davalarının süresi, davanın karmaşıklığına, delillerin toplanma hızına, bilirkişi incelemelerinin tamamlanmasına ve mahkemenin iş yüküne göre değişiklik gösterir. Anlaşmalı boşanma ile birlikte talep edilen velayet kararları daha hızlı sonuçlanırken, çekişmeli velayet davaları genellikle daha uzun sürebilir. Ortalama bir süre vermek yanıltıcı olabilir, ancak genellikle birkaç aydan bir yıla kadar sürebilmektedir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "6. Velayet davasında hangi deliller önemlidir?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Velayet davalarında çocuğun üstün yararını ortaya koyacak her türlü delil önemlidir. Bunlar arasında tanık beyanları, ebeveynlerin yaşam koşullarını gösteren belgeler (iş durumu, ikametgah vb.), okul ve sağlık raporları, sosyal inceleme raporları (pedagog, psikolog, sosyal hizmet uzmanı tarafından hazırlanan), çocuğun kendi ifadesi (idrak çağındaysa) ve ebeveynlerin çocukla olan ilişkilerini gösteren diğer kanıtlar yer alabilir."
+        }
+      }
+    ]
+  }
+]

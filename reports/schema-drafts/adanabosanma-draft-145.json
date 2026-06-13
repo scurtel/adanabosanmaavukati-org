@@ -1,0 +1,122 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Adana'da Çekişmeli Boşanma Davası Ne Kadar Sürer? | Süreç ve Deliller",
+    "description": "Adana'da çekişmeli boşanma davası süresi, aşamaları, delillerin ve tanık anlatımlarının önemi hakkında detaylı bilgi edinin. Ortalama dava süresi ve etkileyen faktörler.",
+    "url": "https://adanabosanmaavukati.org/adanada-cekismeli-bosanma-davasi-ne-kadar-surer/",
+    "author": {
+      "@type": "Person",
+      "name": "Av. Ceren Sümer Cilli"
+    },
+    "reviewer": {
+      "@type": "Person",
+      "name": "Av. Ceren Sümer Cilli"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "adanabosanmaavukati.org"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Adana"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "Çekişmeli Boşanma Davası"
+      },
+      {
+        "@type": "Thing",
+        "name": "Boşanma Süresi"
+      },
+      {
+        "@type": "Thing",
+        "name": "Adana Aile Mahkemeleri"
+      },
+      {
+        "@type": "Thing",
+        "name": "Dava Aşamaları"
+      },
+      {
+        "@type": "Thing",
+        "name": "Delillerin Toplanması"
+      },
+      {
+        "@type": "Thing",
+        "name": "Tanık Anlatımları"
+      },
+      {
+        "@type": "Thing",
+        "name": "Nafaka"
+      },
+      {
+        "@type": "Thing",
+        "name": "Velayet"
+      },
+      {
+        "@type": "Thing",
+        "name": "Mal Paylaşımı"
+      },
+      {
+        "@type": "Thing",
+        "name": "İstinaf ve Temyiz Süreçleri"
+      }
+    ],
+    "inLanguage": "tr-TR"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Adana'da çekişmeli boşanma davası ortalama ne kadar sürer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Adana'da çekişmeli boşanma davasının yerel mahkeme aşaması ortalama 1 ila 2 yıl sürebilir. Ancak bu süre, davanın karmaşıklığına, delil toplama sürecine, tanık anlatımlarına ve mahkemenin iş yüküne göre önemli ölçüde değişebilir. İstinaf ve temyiz süreçleri eklendiğinde davanın kesinleşmesi 3 ila 5 yıl veya daha uzun sürebilir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Dava süresini kısaltmak için neler yapılabilir?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Dava süresini kısaltmak için yapılabilecek en önemli şeylerden biri, dava dilekçesinin eksiksiz ve doğru hazırlanması, tüm delillerin zamanında ve düzenli bir şekilde mahkemeye sunulmasıdır. Ayrıca, tarafların duruşmalara düzenli katılması, tebligat adreslerinin güncel tutulması ve avukatın süreci etkin yönetmesi de süreyi olumlu etkiler. Mümkünse, davanın bir aşamasında tarafların uzlaşmaya varması (anlaşmalı boşanmaya dönüştürme) en hızlı çözümdür."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "İstinaf ve temyiz süreçleri çekişmeli boşanma davasını ne kadar uzatır?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yerel mahkeme kararının istinaf edilmesi durumunda Bölge Adliye Mahkemesi'nde dosyanın incelenmesi ortalama 6 ay ile 1 yıl sürebilir. Temyiz yoluna başvurulması halinde ise Yargıtay'daki inceleme süresi 1 ila 2 yıl veya daha uzun sürebilir. Bu kanun yolları, davanın kesinleşme süresini önemli ölçüde artırmaktadır."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Çekişmeli boşanma davası devam ederken eşler ayrı yaşayabilir mi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Evet, çekişmeli boşanma davası devam ederken eşlerin ayrı yaşaması yasal bir haktır. Hatta eşlerin fiilen ayrı yaşaması, evlilik birliğinin temelden sarsıldığının bir göstergesi olarak kabul edilebilir ve boşanma gerekçesini destekleyici bir delil niteliği taşıyabilir. Bu süreçte mahkeme, çocukların velayeti ve eşler için geçici tedbir nafakası gibi konularda ara kararlar alabilir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Mal paylaşımı davası boşanma davasıyla birlikte mi görülür?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Hayır, mal paylaşımı (mal rejimi tasfiyesi) davası genellikle boşanma davasından ayrı ve bağımsız bir dava olarak görülür. Boşanma davasının kesinleşmesi beklenmeden mal paylaşımı davası açılabilir, ancak mal rejiminin tasfiyesine ilişkin hüküm boşanma kararının kesinleşmesinden sonra uygulanabilir hale gelir. Yani, boşanma kararı kesinleşmeden mal paylaşımı yapılamaz."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Çekişmeli boşanma davasında deliller ve tanıklar neden önemlidir?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Çekişmeli boşanma davalarında, tarafların iddialarını ispatlaması ve mahkemenin doğru bir karar vermesi için deliller ve tanık anlatımları hayati öneme sahiptir. Boşanma sebeplerinin varlığı, kusur durumu, nafaka, velayet ve tazminat taleplerinin haklılığı gibi konularda sunulan belgeler, tanık beyanları ve diğer ispat araçları davanın seyrini doğrudan etkiler. Eksiksiz ve güçlü deliller, davanın daha hızlı ve lehinize sonuçlanmasına yardımcı olabilir."
+        }
+      }
+    ]
+  }
+]
