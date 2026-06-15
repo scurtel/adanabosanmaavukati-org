@@ -1,0 +1,353 @@
+{
+  "mode": "execute",
+  "backupDir": "C:\\Users\\scurt\\Desktop\\Cursor Dosyalar\\adanabosanmaavukati.org\\data\\backups\\featured-image-cleanup-2026-06-15T08-45-26-886Z",
+  "backup": {
+    "backedUpAt": "2026-06-15T08:45:26.889Z",
+    "alt": [
+      {
+        "mediaId": 94,
+        "slug": "adana-nafaka-davasi-avukati-img",
+        "alt_text": "Nafaka türleri ve boşanma sürecinde mali haklar",
+        "title": "",
+        "target": {
+          "reportPostId": 131,
+          "reportMediaId": 151,
+          "reportTitle": "Nafaka Türleri Nelerdir?",
+          "fallbackMediaId": 94,
+          "altText": "Nafaka türleri ve boşanma sürecinde mali haklar",
+          "mediaId": 94,
+          "source": "fallback-live-empty-alt",
+          "reportMediaMissing": 151
+        }
+      },
+      {
+        "mediaId": 87,
+        "slug": "adana-cekismeli-bosanma-avukati-img",
+        "alt_text": "Boşanma davasında hakimin takdir yetkisi",
+        "title": "",
+        "target": {
+          "reportPostId": 122,
+          "reportMediaId": 123,
+          "reportTitle": "Boşanma Davasında Hakimin Takdir Yetkisi",
+          "fallbackMediaId": 87,
+          "altText": "Boşanma davasında hakimin takdir yetkisi",
+          "mediaId": 87,
+          "source": "fallback-live-empty-alt",
+          "reportMediaMissing": 123
+        }
+      },
+      {
+        "mediaId": 90,
+        "slug": "adanada-anlasmali-bosanma-avukati-img",
+        "alt_text": "Anlaşmalı boşanma davası ve güncel uygulamalar",
+        "title": "",
+        "target": {
+          "reportPostId": 98,
+          "reportMediaId": 100,
+          "reportTitle": "Anlaşmalı Boşanma Davası (güncel uygulamalar)",
+          "fallbackMediaId": 90,
+          "altText": "Anlaşmalı boşanma davası ve güncel uygulamalar",
+          "mediaId": 90,
+          "source": "fallback-live-empty-alt",
+          "reportMediaMissing": 100
+        }
+      }
+    ],
+    "categories": [
+      {
+        "postId": 263,
+        "missing": true,
+        "titleHint": "Ekşi / Uludağ Sözlük"
+      },
+      {
+        "postId": 257,
+        "missing": true,
+        "titleHint": "Trump / bilim insanı"
+      },
+      {
+        "postId": 252,
+        "missing": true,
+        "titleHint": "Yapay zeka ceza"
+      }
+    ]
+  },
+  "altResults": [
+    {
+      "reportPostId": 131,
+      "reportMediaId": 151,
+      "reportTitle": "Nafaka Türleri Nelerdir?",
+      "fallbackMediaId": 94,
+      "altText": "Nafaka türleri ve boşanma sürecinde mali haklar",
+      "mediaId": 94,
+      "source": "fallback-live-empty-alt",
+      "reportMediaMissing": 151,
+      "skipped": "already-set"
+    },
+    {
+      "reportPostId": 122,
+      "reportMediaId": 123,
+      "reportTitle": "Boşanma Davasında Hakimin Takdir Yetkisi",
+      "fallbackMediaId": 87,
+      "altText": "Boşanma davasında hakimin takdir yetkisi",
+      "mediaId": 87,
+      "source": "fallback-live-empty-alt",
+      "reportMediaMissing": 123,
+      "skipped": "already-set"
+    },
+    {
+      "reportPostId": 98,
+      "reportMediaId": 100,
+      "reportTitle": "Anlaşmalı Boşanma Davası (güncel uygulamalar)",
+      "fallbackMediaId": 90,
+      "altText": "Anlaşmalı boşanma davası ve güncel uygulamalar",
+      "mediaId": 90,
+      "source": "fallback-live-empty-alt",
+      "reportMediaMissing": 100,
+      "skipped": "already-set"
+    }
+  ],
+  "categoryResults": [
+    {
+      "postId": 263,
+      "titleHint": "Ekşi / Uludağ Sözlük",
+      "action": "skipped-not-found",
+      "note": "Canlı sitede bu post ID mevcut değil"
+    },
+    {
+      "postId": 257,
+      "titleHint": "Trump / bilim insanı",
+      "action": "skipped-not-found",
+      "note": "Canlı sitede bu post ID mevcut değil"
+    },
+    {
+      "postId": 252,
+      "titleHint": "Yapay zeka ceza",
+      "action": "skipped-not-found",
+      "note": "Canlı sitede bu post ID mevcut değil"
+    }
+  ],
+  "verify": {
+    "checkedAt": "2026-06-15T08:45:28.438Z",
+    "alt": [
+      {
+        "mediaId": 94,
+        "alt_text": "Nafaka türleri ve boşanma sürecinde mali haklar",
+        "ok": true,
+        "reportMediaId": 151
+      },
+      {
+        "mediaId": 87,
+        "alt_text": "Boşanma davasında hakimin takdir yetkisi",
+        "ok": true,
+        "reportMediaId": 123
+      },
+      {
+        "mediaId": 90,
+        "alt_text": "Anlaşmalı boşanma davası ve güncel uygulamalar",
+        "ok": true,
+        "reportMediaId": 100
+      }
+    ],
+    "categories": [
+      {
+        "postId": 263,
+        "ok": true,
+        "note": "post-not-found-already-absent"
+      },
+      {
+        "postId": 257,
+        "ok": true,
+        "note": "post-not-found-already-absent"
+      },
+      {
+        "postId": 252,
+        "ok": true,
+        "note": "post-not-found-already-absent"
+      }
+    ],
+    "rehberPage": {
+      "https://adanabosanmaavukati.org/aile-hukuku-rehberi/": {
+        "http": 404,
+        "offTopicVisible": []
+      },
+      "https://adanabosanmaavukati.org/category/aile-hukuku/": {
+        "http": 200,
+        "offTopicVisible": []
+      }
+    },
+    "featuredMissing": [
+      {
+        "id": 160,
+        "slug": "adanada-miras-davalari-ve-miras-paylasimi",
+        "title": "Adana&#8217;da Miras Davaları ve Miras Paylaşımı Süreci"
+      },
+      {
+        "id": 159,
+        "slug": "adanada-ortakligin-giderilmesi-davasi",
+        "title": "Adana&#8217;da Ortaklığın Giderilmesi Davası Nasıl Açılır?"
+      },
+      {
+        "id": 158,
+        "slug": "adana-cekismeli-bosanma-davasi",
+        "title": "Adana&#8217;da Çekişmeli Boşanma Davası Nasıl Açılır?"
+      },
+      {
+        "id": 149,
+        "slug": "adanada-uzaklastirma-karari-nasil-alinir",
+        "title": "Adana&#8217;da Uzaklaştırma Kararı Nasıl Alınır? 6284 Sayılı Kanun Kapsamında Rehber"
+      },
+      {
+        "id": 148,
+        "slug": "bosanmada-mal-paylasimi-ve-katilma-alacagi",
+        "title": "Boşanmada Mal Paylaşımı ve Katılma Alacağı Nasıl Hesaplanır?"
+      },
+      {
+        "id": 147,
+        "slug": "adanada-velayet-davasinda-cocugun-ustun-yarari",
+        "title": "Adana&#8217;da Velayet Davasında Çocuğun Üstün Yararı"
+      },
+      {
+        "id": 146,
+        "slug": "adanada-nafaka-davasi-ve-nafaka-artirim-sureci",
+        "title": "Adana&#8217;da Nafaka Davası ve Nafaka Artırım Süreci"
+      },
+      {
+        "id": 145,
+        "slug": "adanada-cekismeli-bosanma-davasi-ne-kadar-surer",
+        "title": "Adana&#8217;da Çekişmeli Boşanma Davası Ne Kadar Sürer?"
+      },
+      {
+        "id": 144,
+        "slug": "adanada-anlasmali-bosanma-protokolu",
+        "title": "Adana&#8217;da Anlaşmalı Boşanma Protokolü Nasıl Hazırlanır?"
+      },
+      {
+        "id": 143,
+        "slug": "adanada-bosanma-davasi-nasil-acilir",
+        "title": "Adana&#8217;da Boşanma Davası Nasıl Açılır?"
+      },
+      {
+        "id": 131,
+        "slug": "aldatma-zina-nedeniyle-bosanma-davasi-2026-ispat-1002",
+        "title": "Aldatma (Zina) Nedeniyle Boşanma Davası 2026: İspat, Deliller ve Hak Kaybı Riskleri"
+      },
+      {
+        "id": 26,
+        "slug": "adana-velayet-davasi",
+        "title": "Adana Velayet Davası"
+      }
+    ],
+    "allCategories": [
+      {
+        "id": 7,
+        "slug": "aile-hukuku",
+        "name": "Aile Hukuku",
+        "count": 10
+      },
+      {
+        "id": 5,
+        "slug": "bosanma-davalari",
+        "name": "Boşanma Davaları",
+        "count": 4
+      },
+      {
+        "id": 1,
+        "slug": "hizmetler",
+        "name": "Hizmetler",
+        "count": 1
+      },
+      {
+        "id": 20,
+        "slug": "koruma-ve-uzaklastirma",
+        "name": "Koruma ve Uzaklaştırma",
+        "count": 1
+      },
+      {
+        "id": 17,
+        "slug": "mal-paylasimi",
+        "name": "Mal Paylaşımı",
+        "count": 2
+      },
+      {
+        "id": 13,
+        "slug": "nafaka",
+        "name": "Nafaka",
+        "count": 1
+      },
+      {
+        "id": 6,
+        "slug": "nafaka-davalari",
+        "name": "Nafaka Davaları",
+        "count": 0
+      },
+      {
+        "id": 15,
+        "slug": "velayet",
+        "name": "Velayet",
+        "count": 1
+      },
+      {
+        "id": 4,
+        "slug": "velayet-davalari",
+        "name": "Velayet Davaları",
+        "count": 2
+      }
+    ]
+  },
+  "allCategories": [
+    {
+      "id": 7,
+      "slug": "aile-hukuku",
+      "name": "Aile Hukuku",
+      "count": 10
+    },
+    {
+      "id": 5,
+      "slug": "bosanma-davalari",
+      "name": "Boşanma Davaları",
+      "count": 4
+    },
+    {
+      "id": 1,
+      "slug": "hizmetler",
+      "name": "Hizmetler",
+      "count": 1
+    },
+    {
+      "id": 20,
+      "slug": "koruma-ve-uzaklastirma",
+      "name": "Koruma ve Uzaklaştırma",
+      "count": 1
+    },
+    {
+      "id": 17,
+      "slug": "mal-paylasimi",
+      "name": "Mal Paylaşımı",
+      "count": 2
+    },
+    {
+      "id": 13,
+      "slug": "nafaka",
+      "name": "Nafaka",
+      "count": 1
+    },
+    {
+      "id": 6,
+      "slug": "nafaka-davalari",
+      "name": "Nafaka Davaları",
+      "count": 0
+    },
+    {
+      "id": 15,
+      "slug": "velayet",
+      "name": "Velayet",
+      "count": 1
+    },
+    {
+      "id": 4,
+      "slug": "velayet-davalari",
+      "name": "Velayet Davaları",
+      "count": 2
+    }
+  ]
+}

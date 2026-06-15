@@ -1,0 +1,50 @@
+{
+  "log": [
+    {
+      "id": 26,
+      "slug": "adana-velayet-davasi",
+      "action": "applied",
+      "faqCount": 3
+    },
+    {
+      "id": 134,
+      "slug": "velayet-davasinda-hakim-karar-kriterleri-2026-7191",
+      "action": "applied",
+      "faqCount": 5
+    },
+    {
+      "id": 146,
+      "slug": "adanada-nafaka-davasi-ve-nafaka-artirim-sureci",
+      "action": "applied",
+      "faqCount": 6
+    },
+    {
+      "id": 148,
+      "slug": "bosanmada-mal-paylasimi-ve-katilma-alacagi",
+      "action": "applied",
+      "faqCount": 7
+    }
+  ],
+  "verify": [
+    {
+      "id": 26,
+      "slug": "adana-velayet-davasi",
+      "hasFaqSchema": true
+    },
+    {
+      "id": 134,
+      "slug": "velayet-davasinda-hakim-karar-kriterleri-2026-7191",
+      "hasFaqSchema": true
+    },
+    {
+      "id": 146,
+      "slug": "adanada-nafaka-davasi-ve-nafaka-artirim-sureci",
+      "hasFaqSchema": true
+    },
+    {
+      "id": 148,
+      "slug": "bosanmada-mal-paylasimi-ve-katilma-alacagi",
+      "hasFaqSchema": true
+    }
+  ]
+}

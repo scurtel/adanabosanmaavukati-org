@@ -18,6 +18,10 @@
     "strengthen:legacy": "node scripts/strengthen-legacy-links.mjs",
     "fix:ay1-qc": "node scripts/fix-ay1-quality-issues.mjs",
     "fix:ay1-polish": "node scripts/fix-ay1-polish.mjs",
+    "fix:featured-images": "node scripts/fix-featured-image-cleanup.mjs",
+    "apply:seo-phase1": "node scripts/apply-seo-phase1.mjs",
+    "apply:seo-phase2": "node scripts/apply-seo-phase2.mjs",
+    "fix:missing-faq": "node scripts/fix-missing-faq-schema.mjs",
     "plan:links": "node scripts/internal-link-plan.mjs"
   },
   "engines": {

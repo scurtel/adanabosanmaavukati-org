@@ -1,0 +1,145 @@
+{
+  "mode": "execute",
+  "backupDir": "C:\\Users\\scurt\\Desktop\\Cursor Dosyalar\\adanabosanmaavukati.org\\data\\backups\\seo-phase1-2026-06-15T08-57-18-423Z",
+  "featuredResults": [
+    {
+      "postId": 26,
+      "slug": "adana-velayet-davasi",
+      "action": "assigned",
+      "mediaId": 198,
+      "alt": "Adana velayet davası süreci ve çocuğun üstün yararı"
+    },
+    {
+      "postId": 131,
+      "slug": "aldatma-zina-nedeniyle-bosanma-davasi-2026-ispat-1002",
+      "action": "assigned",
+      "mediaId": 199,
+      "alt": "Aldatma ve zina nedeniyle boşanma davasında ispat ve deliller"
+    },
+    {
+      "postId": 143,
+      "slug": "adanada-bosanma-davasi-nasil-acilir",
+      "action": "assigned",
+      "mediaId": 200,
+      "alt": "Adana'da boşanma davası açma süreci ve gerekli adımlar"
+    },
+    {
+      "postId": 144,
+      "slug": "adanada-anlasmali-bosanma-protokolu",
+      "action": "assigned",
+      "mediaId": 201,
+      "alt": "Adana'da anlaşmalı boşanma protokolü hazırlama süreci"
+    },
+    {
+      "postId": 145,
+      "slug": "adanada-cekismeli-bosanma-davasi-ne-kadar-surer",
+      "action": "assigned",
+      "mediaId": 202,
+      "alt": "Adana'da çekişmeli boşanma davası süresi ve aşamaları"
+    },
+    {
+      "postId": 146,
+      "slug": "adanada-nafaka-davasi-ve-nafaka-artirim-sureci",
+      "action": "assigned",
+      "mediaId": 203,
+      "alt": "Adana'da nafaka davası ve nafaka artırım süreci"
+    },
+    {
+      "postId": 147,
+      "slug": "adanada-velayet-davasinda-cocugun-ustun-yarari",
+      "action": "assigned",
+      "mediaId": 204,
+      "alt": "Velayet davasında çocuğun üstün yararı ilkesi"
+    },
+    {
+      "postId": 148,
+      "slug": "bosanmada-mal-paylasimi-ve-katilma-alacagi",
+      "action": "assigned",
+      "mediaId": 205,
+      "alt": "Boşanmada mal paylaşımı ve katılma alacağı hesaplama süreci"
+    },
+    {
+      "postId": 149,
+      "slug": "adanada-uzaklastirma-karari-nasil-alinir",
+      "action": "assigned",
+      "mediaId": 206,
+      "alt": "6284 sayılı Kanun kapsamında uzaklaştırma kararı süreci"
+    },
+    {
+      "postId": 158,
+      "slug": "adana-cekismeli-bosanma-davasi",
+      "action": "assigned",
+      "mediaId": 207,
+      "alt": "Adana'da çekişmeli boşanma davası nasıl açılır"
+    },
+    {
+      "postId": 159,
+      "slug": "adanada-ortakligin-giderilmesi-davasi",
+      "action": "assigned",
+      "mediaId": 208,
+      "alt": "Adana'da ortaklığın giderilmesi davası ve izale-i şuyu süreci"
+    },
+    {
+      "postId": 160,
+      "slug": "adanada-miras-davalari-ve-miras-paylasimi",
+      "action": "assigned",
+      "mediaId": 209,
+      "alt": "Adana'da miras davaları ve miras paylaşımı süreci"
+    }
+  ],
+  "hubResults": [
+    {
+      "pageId": 123,
+      "slug": "adana-cekismeli-bosanma-avukati",
+      "action": "appended",
+      "linksBefore": 0,
+      "linksAfter": 6
+    },
+    {
+      "pageId": 121,
+      "slug": "adanada-anlasmali-bosanma-avukati",
+      "action": "appended",
+      "linksBefore": 0,
+      "linksAfter": 6
+    },
+    {
+      "pageId": 117,
+      "slug": "adana-nafaka-davasi-avukati",
+      "action": "appended",
+      "linksBefore": 0,
+      "linksAfter": 6
+    },
+    {
+      "pageId": 39,
+      "slug": "iletisim",
+      "action": "appended",
+      "linksBefore": 0,
+      "linksAfter": 4
+    }
+  ],
+  "verify": {
+    "missingFm": [],
+    "hubVerify": [
+      {
+        "slug": "adana-cekismeli-bosanma-avukati",
+        "markerVisible": true,
+        "internalLinks": 37
+      },
+      {
+        "slug": "adanada-anlasmali-bosanma-avukati",
+        "markerVisible": true,
+        "internalLinks": 37
+      },
+      {
+        "slug": "adana-nafaka-davasi-avukati",
+        "markerVisible": true,
+        "internalLinks": 37
+      },
+      {
+        "slug": "iletisim",
+        "markerVisible": true,
+        "internalLinks": 35
+      }
+    ]
+  }
+}
