@@ -28,11 +28,9 @@ const WP_POST_STATUS = process.env.WP_POST_STATUS || 'publish';
 const GEMINI_API_KEY =
   process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY || process.env.GOOGLE_GEMINI_API_KEY;
 
-// ---- Kelime sayısı sınırları ----
+// ---- Kelime sayısı (yalnızca ÖNERİ; kesin sınır yok) ----
 const TARGET_MIN = 1000;
 const TARGET_MAX = 1300;
-const HARD_MIN = 900;
-const HARD_MAX = 1400;
 
 const BANNED = [
   'en iyi', 'kesin kazan', 'garanti', 'en hızlı', 'uzman avukat', 'lider avukat',
@@ -155,16 +153,28 @@ async function generateArticle(topic) {
     last = article;
     const faqText = (article.faq || []).map((f) => `${f.question} ${f.answer}`).join(' ');
     const wc = wordCount(`${article.bodyHtml || ''} ${faqText}`);
-    console.log(`Deneme ${attempt}: kelime sayısı = ${wc} (kabul: ${HARD_MIN}-${HARD_MAX})`);
-    if (wc >= HARD_MIN && wc <= HARD_MAX && (article.faq || []).length >= 4 && article.bodyHtml) {
-      article._wordCount = wc;
+    article._wordCount = wc;
+
+    const okStructure = !!article.bodyHtml && (article.faq || []).length >= 4;
+    const inTarget = wc >= TARGET_MIN && wc <= TARGET_MAX;
+    console.log(`Deneme ${attempt}: kelime sayısı = ${wc} (öneri: ${TARGET_MIN}-${TARGET_MAX}${inTarget ? '' : ' — öneri dışı'})`);
+
+    // İdeal durum: yapı tamam ve öneri aralığında → hemen kabul.
+    if (okStructure && inTarget) return article;
+
+    // İlk denemede ideal değilse, öneriye yaklaşmak için bir kez daha dene.
+    if (attempt === 1) {
+      console.log('Öneri aralığı dışında veya eksik FAQ — bir kez daha deneniyor...');
+      continue;
+    }
+
+    // İkinci deneme: kelime sayısı yalnızca öneri olduğundan, yapı sağlamsa kabul et.
+    if (okStructure) {
+      if (!inTarget) console.log('Not: kelime sayısı öneri aralığı dışında ancak kabul ediliyor (kesin sınır yok).');
       return article;
     }
-    if (attempt === 1) console.log('Sınır dışı/eksik içerik — yeniden üretiliyor...');
   }
-  throw new Error(
-    `İçerik 2 denemede de kabul sınırları (${HARD_MIN}-${HARD_MAX} kelime, >=4 FAQ) içinde üretilemedi.`
-  );
+  throw new Error('İçerik üretilemedi: gövde (bodyHtml) boş ya da en az 4 FAQ üretilemedi (2 denemede).');
 }
 
 // ---- WordPress REST yardımcıları ----
