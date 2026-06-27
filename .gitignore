@@ -4,5 +4,6 @@ node_modules/
 .env.*.local
 data/
 generated/
+generated-articles/auto-last-run.json
 *.log
 .DS_Store
