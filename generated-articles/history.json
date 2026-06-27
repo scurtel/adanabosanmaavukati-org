@@ -1,4 +1,19 @@
 {
-  "usedTopicIds": [],
-  "articles": []
+  "usedTopicIds": [
+    "anlasmali-bosanma"
+  ],
+  "articles": [
+    {
+      "topicId": "anlasmali-bosanma",
+      "wpId": 231,
+      "title": "Adana&#8217;da Anlaşmalı Boşanma Süreci ve Dikkat Edilmesi Gerekenler",
+      "slug": "adanada-anlasmali-bosanma-sureci",
+      "url": "https://adanabosanmaavukati.org/adanada-anlasmali-bosanma-sureci/",
+      "status": "publish",
+      "focusKeyword": "Adana anlaşmalı boşanma avukatı",
+      "wordCount": 1383,
+      "faqCount": 4,
+      "date": "2026-06-27T08:52:08.087Z"
+    }
+  ]
 }
