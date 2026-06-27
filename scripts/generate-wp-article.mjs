@@ -38,6 +38,7 @@ const BANNED = [
 ];
 
 // ---- Konu havuzu (tema: Adana boşanma / aile hukuku) ----
+// Sırayla işlenir; daha önce üretilen (history.json) konu atlanır.
 const TOPICS = [
   { id: 'anlasmali-bosanma', title: "Adana'da Anlaşmalı Boşanma Süreci ve Dikkat Edilmesi Gerekenler", slug: 'adanada-anlasmali-bosanma-sureci', focusKeyword: 'Adana anlaşmalı boşanma avukatı', categories: ['Boşanma Davaları', 'Aile Hukuku'] },
   { id: 'cekismeli-bosanma', title: "Adana'da Çekişmeli Boşanma Davasında Süreç ve Haklar", slug: 'adanada-cekismeli-bosanma-davasi-surec', focusKeyword: 'Adana çekişmeli boşanma avukatı', categories: ['Boşanma Davaları', 'Aile Hukuku'] },
@@ -51,6 +52,22 @@ const TOPICS = [
   { id: 'aile-hukuku-avukati', title: "Adana Aile Hukuku Avukatı Hangi Davalara Bakar?", slug: 'adana-aile-hukuku-avukati-hangi-davalara-bakar', focusKeyword: 'Adana aile hukuku avukatı', categories: ['Aile Hukuku'] },
   { id: 'tedbir-nafakasi', title: "Boşanma Sürecinde Tedbir Nafakası Nasıl Belirlenir?", slug: 'bosanma-surecinde-tedbir-nafakasi', focusKeyword: 'tedbir nafakası', categories: ['Nafaka', 'Aile Hukuku'] },
   { id: 'bosanma-dava-sureci', title: "Adana'da Boşanma Davası Aşamaları ve Süreç Yönetimi", slug: 'adanada-bosanma-davasi-asamalari-surec-yonetimi', focusKeyword: 'Adana boşanma avukatı', categories: ['Boşanma Davaları', 'Aile Hukuku'] },
+
+  // --- Genişletilmiş konular ---
+  { id: 'uzaklastirma-6284', title: "6284 Sayılı Kanun Kapsamında Uzaklaştırma ve Koruma Kararı", slug: 'bosanma-surecinde-uzaklastirma-ve-koruma-karari-6284', focusKeyword: 'uzaklaştırma kararı', categories: ['Koruma ve Uzaklaştırma', 'Aile Hukuku'] },
+  { id: 'miras', title: "Adana'da Miras Davası ve Mirasçıların Hakları", slug: 'adanada-miras-davasi-ve-mirascilarin-haklari', focusKeyword: 'Adana miras avukatı', categories: ['Aile Hukuku'] },
+  { id: 'ortakligin-giderilmesi', title: "İzale-i Şuyu: Ortaklığın Giderilmesi Davası Süreci", slug: 'izale-i-suyu-ortakligin-giderilmesi-davasi-sureci', focusKeyword: 'ortaklığın giderilmesi davası', categories: ['Mal Paylaşımı', 'Aile Hukuku'] },
+  { id: 'aldatma-zina', title: "Aldatma (Zina) Nedeniyle Boşanma Davası ve Tazminat", slug: 'aldatma-zina-nedeniyle-bosanma-davasi-ve-tazminat', focusKeyword: 'zina nedeniyle boşanma', categories: ['Boşanma Davaları', 'Aile Hukuku'] },
+  { id: 'terk', title: "Terk Nedeniyle Boşanma Davası ve İhtar Şartı", slug: 'terk-nedeniyle-bosanma-davasi-ve-ihtar-sarti', focusKeyword: 'terk nedeniyle boşanma', categories: ['Boşanma Davaları', 'Aile Hukuku'] },
+  { id: 'siddetli-gecimsizlik', title: "Evlilik Birliğinin Temelinden Sarsılması (Şiddetli Geçimsizlik)", slug: 'evlilik-birliginin-temelinden-sarsilmasi-bosanma', focusKeyword: 'şiddetli geçimsizlik nedeniyle boşanma', categories: ['Boşanma Davaları', 'Aile Hukuku'] },
+  { id: 'bosanma-sgk-tazminat', title: "Boşanmada SGK, Dul-Yetim Aylığı ve Tazminat İlişkisi", slug: 'bosanmada-sgk-dul-yetim-ayligi-ve-tazminat', focusKeyword: 'boşanma ve dul aylığı', categories: ['Aile Hukuku'] },
+  { id: 'anlasmali-protokol', title: "Anlaşmalı Boşanma Protokolünde Bulunması Gereken Unsurlar", slug: 'anlasmali-bosanma-protokolunde-bulunmasi-gerekenler', focusKeyword: 'anlaşmalı boşanma protokolü', categories: ['Boşanma Davaları', 'Aile Hukuku'] },
+  { id: 'nafaka-artirim', title: "Nafaka Artırım ve Azaltım Davası: Şartlar ve Süreç", slug: 'nafaka-artirim-ve-azaltim-davasi-sartlar', focusKeyword: 'nafaka artırım davası', categories: ['Nafaka', 'Aile Hukuku'] },
+  { id: 'velayetin-degistirilmesi', title: "Velayetin Değiştirilmesi Davası ve Şartları", slug: 'velayetin-degistirilmesi-davasi-ve-sartlari', focusKeyword: 'velayetin değiştirilmesi', categories: ['Velayet', 'Aile Hukuku'] },
+  { id: 'mal-rejimi', title: "Edinilmiş Mallara Katılma Rejimi ve İstisnaları", slug: 'edinilmis-mallara-katilma-rejimi-ve-istisnalari', focusKeyword: 'mal rejimi', categories: ['Mal Paylaşımı', 'Aile Hukuku'] },
+  { id: 'tanima-tenfiz', title: "Yabancı Mahkeme Boşanma Kararının Türkiye'de Tanınması ve Tenfizi", slug: 'yabanci-bosanma-kararinin-taninmasi-ve-tenfizi', focusKeyword: 'boşanma kararı tanıma tenfiz', categories: ['Boşanma Davaları', 'Aile Hukuku'] },
+  { id: 'bosanma-masraflari', title: "Boşanma Davası Masrafları ve Yargılama Süreci", slug: 'bosanma-davasi-masraflari-ve-yargilama-sureci', focusKeyword: 'boşanma davası masrafları', categories: ['Boşanma Davaları', 'Aile Hukuku'] },
+  { id: 'cekismeli-sure', title: "Çekişmeli Boşanma Ne Kadar Sürer? Süreci Etkileyen Faktörler", slug: 'cekismeli-bosanma-ne-kadar-surer-etkileyen-faktorler', focusKeyword: 'çekişmeli boşanma süresi', categories: ['Boşanma Davaları', 'Aile Hukuku'] },
 ];
 
 function fail(message) {
@@ -108,7 +125,18 @@ function wordCount(html) {
     .filter(Boolean).length;
 }
 
-function buildPrompt(topic) {
+function buildInternalLinkInstruction(internalLinks) {
+  if (!internalLinks || !internalLinks.length) return '';
+  const list = internalLinks.map((l) => ({ anchor: l.title, url: l.url }));
+  return `
+İÇ LİNKLER (yerel SEO için önemli):
+- Aşağıdaki gerçek URL'lerden konuyla ALAKALI olanlardan 3-6 tanesini gövde metnine doğal <a href="URL">anlamlı anchor</a> olarak yerleştir.
+- SADECE bu listedeki URL'leri kullan; uydurma/başka URL EKLEME. Alakasız link ekleme, zorlama yapma.
+${JSON.stringify(list, null, 2)}
+`;
+}
+
+function buildPrompt(topic, internalLinks) {
   return `Sen Türkiye'de aile hukuku alanında hukuki bilgilendirme içeriği yazan deneyimli bir editörsün.
 adanabosanmaavukati.org (Adana merkezli) için Türkçe, yerel SEO uyumlu, özgün bir makale üret.
 
@@ -125,7 +153,7 @@ KURALLAR:
 - Yasak ifadeler (KULLANMA): ${BANNED.join(', ')}.
 - En az 4 adet anlamlı SSS (FAQ) üret.
 - Hukuki uyarı cümlesini metne EKLEME; sistem otomatik ekleyecek.
-
+${buildInternalLinkInstruction(internalLinks)}
 YANIT FORMATI: Yalnızca aşağıdaki şemada GEÇERLİ JSON döndür (başka metin yok):
 {
   "title": "WordPress başlığı (H1, ~50-65 karakter)",
@@ -137,8 +165,8 @@ YANIT FORMATI: Yalnızca aşağıdaki şemada GEÇERLİ JSON döndür (başka me
 }`;
 }
 
-async function generateOnce(topic) {
-  const enhanced = await callGemini(buildPrompt(topic), {
+async function generateOnce(topic, internalLinks) {
+  const enhanced = await callGemini(buildPrompt(topic, internalLinks), {
     json: true,
     temperature: 0.5,
     maxOutputTokens: 16384,
@@ -146,10 +174,10 @@ async function generateOnce(topic) {
   return enhanced;
 }
 
-async function generateArticle(topic) {
+async function generateArticle(topic, internalLinks) {
   let last;
   for (let attempt = 1; attempt <= 2; attempt++) {
-    const article = await generateOnce(topic);
+    const article = await generateOnce(topic, internalLinks);
     last = article;
     const faqText = (article.faq || []).map((f) => `${f.question} ${f.answer}`).join(' ');
     const wc = wordCount(`${article.bodyHtml || ''} ${faqText}`);
@@ -189,6 +217,37 @@ async function wp(path, options = {}) {
     ...options,
     headers: { Accept: 'application/json', Authorization: wpAuthHeader(), ...(options.headers || {}) },
   });
+}
+
+function decodeEntities(s) {
+  return String(s || '')
+    .replace(/&#8217;|&#8216;|&#039;|&#39;/g, "'")
+    .replace(/&#8211;|&#8212;/g, '-')
+    .replace(/&amp;/g, '&')
+    .replace(/&quot;/g, '"')
+    .replace(/&nbsp;/g, ' ')
+    .replace(/<[^>]+>/g, '')
+    .trim();
+}
+
+// Mevcut yayındaki yazı/sayfaları çekip iç link adaylarını döndürür (salt-okunur).
+async function fetchInternalLinks(limit = 40) {
+  const out = [];
+  for (const ep of ['posts', 'pages']) {
+    try {
+      const res = await wp(`/wp-json/wp/v2/${ep}?status=publish&per_page=100&_fields=title,link`);
+      if (!res.ok) continue;
+      const arr = await res.json();
+      for (const it of arr) {
+        const title = decodeEntities(it.title?.rendered);
+        if (it.link && title) out.push({ title, url: it.link });
+      }
+    } catch {
+      /* iç link çekilemezse linksiz devam et */
+    }
+  }
+  const seen = new Set();
+  return out.filter((l) => (seen.has(l.url) ? false : seen.add(l.url))).slice(0, limit);
 }
 
 async function ensureUniqueSlug(slug) {
@@ -274,7 +333,10 @@ async function main() {
   }
   console.log(`Seçilen konu: ${topic.id} — ${topic.title}`);
 
-  const article = await generateArticle(topic);
+  const internalLinks = await fetchInternalLinks();
+  console.log(`İç link adayı: ${internalLinks.length} mevcut içerik bulundu.`);
+
+  const article = await generateArticle(topic, internalLinks);
 
   // Önerilmeyen ifade kontrolü — yalnızca uyarı; yayını ENGELLEMEZ.
   const lc = `${article.title} ${article.bodyHtml}`.toLowerCase();
@@ -285,6 +347,8 @@ async function main() {
 
   const slug = await ensureUniqueSlug(topic.slug);
   const content = buildContent(article, topic);
+  const internalLinkCount = (content.match(/href="https?:\/\/[^"]*adanabosanmaavukati\.org/gi) || []).length;
+  console.log(`Gövdedeki iç link sayısı: ${internalLinkCount}`);
 
   const categoryIds = await matchCategoryIds(topic.categories);
   const focusTagId = await ensureTagId(topic.focusKeyword);
@@ -325,6 +389,7 @@ async function main() {
     focusKeyword: topic.focusKeyword,
     wordCount: article._wordCount,
     faqCount: (article.faq || []).length,
+    internalLinkCount,
     date: new Date().toISOString(),
   };
 
