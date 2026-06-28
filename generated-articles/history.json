@@ -1,6 +1,7 @@
 {
   "usedTopicIds": [
-    "anlasmali-bosanma"
+    "anlasmali-bosanma",
+    "cekismeli-bosanma"
   ],
   "articles": [
     {
@@ -14,6 +15,19 @@
       "wordCount": 1383,
       "faqCount": 4,
       "date": "2026-06-27T08:52:08.087Z"
+    },
+    {
+      "topicId": "cekismeli-bosanma",
+      "wpId": 232,
+      "title": "Adana&#8217;da Çekişmeli Boşanma Davası: Süreç, Haklar ve Hukuki Destek",
+      "slug": "adanada-cekismeli-bosanma-davasi-surec",
+      "url": "https://adanabosanmaavukati.org/adanada-cekismeli-bosanma-davasi-surec/",
+      "status": "publish",
+      "focusKeyword": "Adana çekişmeli boşanma avukatı",
+      "wordCount": 1370,
+      "faqCount": 5,
+      "internalLinkCount": 7,
+      "date": "2026-06-28T09:01:40.960Z"
     }
   ]
 }
