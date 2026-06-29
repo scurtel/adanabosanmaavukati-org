@@ -1,7 +1,8 @@
 {
   "usedTopicIds": [
     "anlasmali-bosanma",
-    "cekismeli-bosanma"
+    "cekismeli-bosanma",
+    "velayet"
   ],
   "articles": [
     {
@@ -28,6 +29,19 @@
       "faqCount": 5,
       "internalLinkCount": 7,
       "date": "2026-06-28T09:01:40.960Z"
+    },
+    {
+      "topicId": "velayet",
+      "wpId": 233,
+      "title": "Adana&#8217;da Velayet Davası ve Çocuğun Üstün Yararı İlkesi",
+      "slug": "adanada-velayet-davasi-cocugun-ustun-yarari-rehber",
+      "url": "https://adanabosanmaavukati.org/adanada-velayet-davasi-cocugun-ustun-yarari-rehber/",
+      "status": "publish",
+      "focusKeyword": "Adana velayet avukatı",
+      "wordCount": 1362,
+      "faqCount": 4,
+      "internalLinkCount": 7,
+      "date": "2026-06-29T06:55:15.105Z"
     }
   ]
 }
