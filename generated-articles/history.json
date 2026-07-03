@@ -2,7 +2,8 @@
   "usedTopicIds": [
     "anlasmali-bosanma",
     "cekismeli-bosanma",
-    "velayet"
+    "velayet",
+    "nafaka-turleri"
   ],
   "articles": [
     {
@@ -42,6 +43,19 @@
       "faqCount": 4,
       "internalLinkCount": 7,
       "date": "2026-06-29T06:55:15.105Z"
+    },
+    {
+      "topicId": "nafaka-turleri",
+      "wpId": 234,
+      "title": "Boşanmada Nafaka Türleri: Tedbir, Yoksulluk ve İştirak Nafakası",
+      "slug": "bosanmada-nafaka-turleri-tedbir-yoksulluk-istirak",
+      "url": "https://adanabosanmaavukati.org/bosanmada-nafaka-turleri-tedbir-yoksulluk-istirak/",
+      "status": "publish",
+      "focusKeyword": "Adana nafaka avukatı",
+      "wordCount": 1040,
+      "faqCount": 4,
+      "internalLinkCount": 4,
+      "date": "2026-07-03T05:58:11.747Z"
     }
   ]
 }
