@@ -3,7 +3,8 @@
     "anlasmali-bosanma",
     "cekismeli-bosanma",
     "velayet",
-    "nafaka-turleri"
+    "nafaka-turleri",
+    "mal-paylasimi"
   ],
   "articles": [
     {
@@ -56,6 +57,19 @@
       "faqCount": 4,
       "internalLinkCount": 4,
       "date": "2026-07-03T05:58:11.747Z"
+    },
+    {
+      "topicId": "mal-paylasimi",
+      "wpId": 235,
+      "title": "Adana&#8217;da Boşanmada Mal Paylaşımı ve Katkı Payı Süreci",
+      "slug": "adanada-bosanmada-mal-paylasimi-katki-payi",
+      "url": "https://adanabosanmaavukati.org/adanada-bosanmada-mal-paylasimi-katki-payi/",
+      "status": "publish",
+      "focusKeyword": "Adana mal paylaşımı avukatı",
+      "wordCount": 1107,
+      "faqCount": 4,
+      "internalLinkCount": 6,
+      "date": "2026-07-06T06:41:59.536Z"
     }
   ]
 }
