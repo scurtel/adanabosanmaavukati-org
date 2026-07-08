@@ -4,7 +4,8 @@
     "cekismeli-bosanma",
     "velayet",
     "nafaka-turleri",
-    "mal-paylasimi"
+    "mal-paylasimi",
+    "ziynet"
   ],
   "articles": [
     {
@@ -70,6 +71,19 @@
       "faqCount": 4,
       "internalLinkCount": 6,
       "date": "2026-07-06T06:41:59.536Z"
+    },
+    {
+      "topicId": "ziynet",
+      "wpId": 236,
+      "title": "Boşanmada Ziynet (Altın) Alacağı Davası: İspat Yükü ve Hukuki Süreç Adana",
+      "slug": "bosanmada-ziynet-altin-alacagi-davasi",
+      "url": "https://adanabosanmaavukati.org/bosanmada-ziynet-altin-alacagi-davasi/",
+      "status": "publish",
+      "focusKeyword": "ziynet alacağı davası",
+      "wordCount": 1326,
+      "faqCount": 4,
+      "internalLinkCount": 6,
+      "date": "2026-07-08T05:27:09.209Z"
     }
   ]
 }
