@@ -5,7 +5,8 @@
     "velayet",
     "nafaka-turleri",
     "mal-paylasimi",
-    "ziynet"
+    "ziynet",
+    "tazminat"
   ],
   "articles": [
     {
@@ -84,6 +85,19 @@
       "faqCount": 4,
       "internalLinkCount": 6,
       "date": "2026-07-08T05:27:09.209Z"
+    },
+    {
+      "topicId": "tazminat",
+      "wpId": 237,
+      "title": "Boşanmada Maddi ve Manevi Tazminat Talepleri: Adana Hukuk Rehberi",
+      "slug": "bosanmada-maddi-manevi-tazminat-talepleri",
+      "url": "https://adanabosanmaavukati.org/bosanmada-maddi-manevi-tazminat-talepleri/",
+      "status": "publish",
+      "focusKeyword": "boşanmada tazminat",
+      "wordCount": 1623,
+      "faqCount": 4,
+      "internalLinkCount": 7,
+      "date": "2026-07-10T06:10:10.080Z"
     }
   ]
 }
