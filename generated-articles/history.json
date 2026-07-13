@@ -6,7 +6,8 @@
     "nafaka-turleri",
     "mal-paylasimi",
     "ziynet",
-    "tazminat"
+    "tazminat",
+    "kisisel-iliski"
   ],
   "articles": [
     {
@@ -98,6 +99,19 @@
       "faqCount": 4,
       "internalLinkCount": 7,
       "date": "2026-07-10T06:10:10.080Z"
+    },
+    {
+      "topicId": "kisisel-iliski",
+      "wpId": 238,
+      "title": "Boşanmada Çocukla Kişisel İlişki (Görüş) Düzenlemesi",
+      "slug": "bosanmada-cocukla-kisisel-iliski-duzenlemesi",
+      "url": "https://adanabosanmaavukati.org/bosanmada-cocukla-kisisel-iliski-duzenlemesi/",
+      "status": "publish",
+      "focusKeyword": "çocukla kişisel ilişki",
+      "wordCount": 1205,
+      "faqCount": 5,
+      "internalLinkCount": 7,
+      "date": "2026-07-13T05:42:21.864Z"
     }
   ]
 }
