@@ -7,7 +7,8 @@
     "mal-paylasimi",
     "ziynet",
     "tazminat",
-    "kisisel-iliski"
+    "kisisel-iliski",
+    "deliller"
   ],
   "articles": [
     {
@@ -112,6 +113,19 @@
       "faqCount": 5,
       "internalLinkCount": 7,
       "date": "2026-07-13T05:42:21.864Z"
+    },
+    {
+      "topicId": "deliller",
+      "wpId": 239,
+      "title": "Boşanma Davasında Deliller ve İspat Yöntemleri",
+      "slug": "bosanma-davasinda-deliller-ve-ispat",
+      "url": "https://adanabosanmaavukati.org/bosanma-davasinda-deliller-ve-ispat/",
+      "status": "publish",
+      "focusKeyword": "boşanma davasında deliller",
+      "wordCount": 1345,
+      "faqCount": 5,
+      "internalLinkCount": 7,
+      "date": "2026-07-15T04:56:28.448Z"
     }
   ]
 }
