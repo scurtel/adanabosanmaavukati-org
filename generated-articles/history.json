@@ -8,7 +8,8 @@
     "ziynet",
     "tazminat",
     "kisisel-iliski",
-    "deliller"
+    "deliller",
+    "aile-hukuku-avukati"
   ],
   "articles": [
     {
@@ -126,6 +127,19 @@
       "faqCount": 5,
       "internalLinkCount": 7,
       "date": "2026-07-15T04:56:28.448Z"
+    },
+    {
+      "topicId": "aile-hukuku-avukati",
+      "wpId": 240,
+      "title": "Adana Aile Hukuku Avukatı Hangi Davalara Bakar? Kapsamlı Rehber",
+      "slug": "adana-aile-hukuku-avukati-hangi-davalara-bakar",
+      "url": "https://adanabosanmaavukati.org/adana-aile-hukuku-avukati-hangi-davalara-bakar/",
+      "status": "publish",
+      "focusKeyword": "Adana aile hukuku avukatı",
+      "wordCount": 1199,
+      "faqCount": 4,
+      "internalLinkCount": 10,
+      "date": "2026-07-17T05:19:14.764Z"
     }
   ]
 }
