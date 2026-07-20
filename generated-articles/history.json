@@ -9,7 +9,8 @@
     "tazminat",
     "kisisel-iliski",
     "deliller",
-    "aile-hukuku-avukati"
+    "aile-hukuku-avukati",
+    "tedbir-nafakasi"
   ],
   "articles": [
     {
@@ -140,6 +141,19 @@
       "faqCount": 4,
       "internalLinkCount": 10,
       "date": "2026-07-17T05:19:14.764Z"
+    },
+    {
+      "topicId": "tedbir-nafakasi",
+      "wpId": 241,
+      "title": "Boşanma Sürecinde Tedbir Nafakası Nasıl Belirlenir?",
+      "slug": "bosanma-surecinde-tedbir-nafakasi",
+      "url": "https://adanabosanmaavukati.org/bosanma-surecinde-tedbir-nafakasi/",
+      "status": "publish",
+      "focusKeyword": "tedbir nafakası",
+      "wordCount": 1216,
+      "faqCount": 5,
+      "internalLinkCount": 7,
+      "date": "2026-07-20T05:48:58.706Z"
     }
   ]
 }
