@@ -1,0 +1,75 @@
+{
+  "execute": true,
+  "log": [
+    {
+      "ts": "2026-07-22T13:29:10.649Z",
+      "step": "backup",
+      "ok": true,
+      "detail": "/Users/yigitc/Desktop/Cursor Dosyalar/adanabosanmaavukati-org/data/backups/critical-fixes-2026-07-22T13-29-10-643Z"
+    },
+    {
+      "ts": "2026-07-22T13:29:11.508Z",
+      "step": "contact CTA + empty h2 removed",
+      "ok": true
+    },
+    {
+      "ts": "2026-07-22T13:29:12.178Z",
+      "step": "homepage internal links + broken anchors",
+      "ok": true
+    },
+    {
+      "ts": "2026-07-22T13:29:12.329Z",
+      "step": "user before",
+      "detail": "name=yigit.cilli@gmail.com slug=yigit-cilligmail-com nickname=Avukat Ceren Sümer Cilli"
+    },
+    {
+      "ts": "2026-07-22T13:29:12.487Z",
+      "step": "user display name",
+      "ok": true,
+      "detail": "→ Avukat Ceren Sümer Cilli"
+    },
+    {
+      "ts": "2026-07-22T13:29:12.660Z",
+      "step": "author noindex user 1",
+      "ok": true
+    },
+    {
+      "ts": "2026-07-22T13:29:12.824Z",
+      "step": "author noindex user 2",
+      "ok": true
+    },
+    {
+      "ts": "2026-07-22T13:29:13.846Z",
+      "step": "create /blog/ page",
+      "ok": true,
+      "detail": "id=246"
+    },
+    {
+      "ts": "2026-07-22T13:29:14.157Z",
+      "step": "Rank Math 301 /blog/",
+      "ok": false,
+      "detail": "redirect 246: 403 {\"code\":\"rest_cannot_edit\",\"message\":\"Maalesef, yeniden y\\u00f6nlendirme olu\\u015fturma \\/ g\\u00fcncelleme izniniz yok.\",\"data\":{\"status\":403}}"
+    },
+    {
+      "ts": "2026-07-22T13:29:14.462Z",
+      "step": "/blog/ noindex + canonical (post type)",
+      "ok": true
+    },
+    {
+      "ts": "2026-07-22T13:29:14.807Z",
+      "step": "menu Adana Velayet Davası",
+      "ok": true
+    },
+    {
+      "ts": "2026-07-22T13:29:14.964Z",
+      "step": "menu Boşanmada Mal Paylaşımı",
+      "ok": true
+    },
+    {
+      "ts": "2026-07-22T13:29:15.409Z",
+      "step": "homepage OG image (post type)",
+      "ok": true,
+      "detail": "https://adanabosanmaavukati.org/wp-content/uploads/2026/06/featured-bosanma-davasi-nasil-acilir.jpg"
+    }
+  ]
+}

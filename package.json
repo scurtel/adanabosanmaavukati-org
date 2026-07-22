@@ -23,7 +23,8 @@
     "apply:seo-phase2": "node scripts/apply-seo-phase2.mjs",
     "fix:missing-faq": "node scripts/fix-missing-faq-schema.mjs",
     "plan:links": "node scripts/internal-link-plan.mjs",
-    "generate:auto-article": "node scripts/generate-wp-article.mjs"
+    "generate:auto-article": "node scripts/generate-wp-article.mjs",
+    "apply:critical-fixes": "node scripts/apply-critical-fixes-2026-07-22.mjs"
   },
   "engines": {
     "node": ">=18"
