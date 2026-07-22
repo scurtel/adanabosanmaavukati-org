@@ -10,7 +10,8 @@
     "kisisel-iliski",
     "deliller",
     "aile-hukuku-avukati",
-    "tedbir-nafakasi"
+    "tedbir-nafakasi",
+    "bosanma-dava-sureci"
   ],
   "articles": [
     {
@@ -154,6 +155,19 @@
       "faqCount": 5,
       "internalLinkCount": 7,
       "date": "2026-07-20T05:48:58.706Z"
+    },
+    {
+      "topicId": "bosanma-dava-sureci",
+      "wpId": 242,
+      "title": "Adana&#8217;da Boşanma Davası Aşamaları ve Süreç Yönetimi",
+      "slug": "adanada-bosanma-davasi-asamalari-surec-yonetimi",
+      "url": "https://adanabosanmaavukati.org/adanada-bosanma-davasi-asamalari-surec-yonetimi/",
+      "status": "publish",
+      "focusKeyword": "Adana boşanma avukatı",
+      "wordCount": 1189,
+      "faqCount": 4,
+      "internalLinkCount": 9,
+      "date": "2026-07-22T05:25:07.058Z"
     }
   ]
 }
