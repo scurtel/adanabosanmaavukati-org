@@ -23,21 +23,48 @@ Kurallar:
 - YAML frontmatter ile başla: title, slug, seo_title, meta_description, categories, tags
 - Markdown gövde: H2/H3 başlıklar, madde işaretleri, FAQ, hukuki uyarı, yazar notu`;
 
+function extractGroundingMetadata(data) {
+  const gm = data?.candidates?.[0]?.groundingMetadata;
+  if (!gm) return null;
+  const sources = (gm.groundingChunks || [])
+    .map((chunk) => ({
+      title: chunk.web?.title || chunk.retrievedContext?.title || null,
+      url: chunk.web?.uri || chunk.retrievedContext?.uri || null,
+    }))
+    .filter((source) => source.url);
+  return {
+    sources,
+    webSearchQueries: gm.webSearchQueries || [],
+    groundingSupports: gm.groundingSupports || [],
+  };
+}
+
+function appendSourcesSection(markdown, grounding) {
+  if (!grounding?.sources?.length) return markdown;
+  const lines = grounding.sources.map((s, i) => `- [${s.title || `Kaynak ${i + 1}`}](${s.url})`);
+  return `${markdown.trim()}\n\n## Kaynaklar\n\n${lines.join('\n')}\n`;
+}
+
 async function callGemini(prompt) {
-  const { apiKey, model } = getGeminiConfig();
+  const { apiKey, model, searchGrounding } = getGeminiConfig();
   if (!apiKey) throw new Error('GEMINI_API_KEY .env dosyasında tanımlı değil.');
 
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
+  const body = {
+    contents: [{ parts: [{ text: `${SYSTEM_RULES}\n\n${prompt}` }] }],
+    generationConfig: {
+      temperature: 0.7,
+      maxOutputTokens: 8192,
+    },
+  };
+  if (searchGrounding) {
+    body.tools = [{ google_search: {} }];
+  }
+
   const res = await fetch(url, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      contents: [{ parts: [{ text: `${SYSTEM_RULES}\n\n${prompt}` }] }],
-      generationConfig: {
-        temperature: 0.7,
-        maxOutputTokens: 8192,
-      },
-    }),
+    body: JSON.stringify(body),
   });
 
   if (!res.ok) {
@@ -48,7 +75,7 @@ async function callGemini(prompt) {
   const data = await res.json();
   const text = data.candidates?.[0]?.content?.parts?.[0]?.text;
   if (!text) throw new Error('Gemini boş yanıt döndü.');
-  return text;
+  return appendSourcesSection(text, extractGroundingMetadata(data));
 }
 
 async function main() {

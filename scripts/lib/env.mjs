@@ -54,7 +54,9 @@ export function getGeminiConfig() {
       process.env.GOOGLE_API_KEY ||
       process.env.GOOGLE_GEMINI_API_KEY,
     model: process.env.GEMINI_MODEL || 'gemini-2.5-flash',
-    searchGrounding: process.env.GEMINI_ENABLE_SEARCH_GROUNDING === 'true',
+    searchGrounding:
+      process.env.GEMINI_GOOGLE_SEARCH_ENABLED === 'true' ||
+      process.env.GEMINI_ENABLE_SEARCH_GROUNDING === 'true',
   };
 }
 
