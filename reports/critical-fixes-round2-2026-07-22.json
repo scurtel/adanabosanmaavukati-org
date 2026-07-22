@@ -1,0 +1,45 @@
+{
+  "ts": "2026-07-22T13:48:03.213Z",
+  "checks": {
+    "contact": {
+      "ok": true,
+      "detail": "tel/wa/emptyH2"
+    },
+    "sitemap": {
+      "ok": true,
+      "detail": "robots=true posts=27/27 aile=true blogIn=false noindexPages=gizlilik-politikasi,cerez-politikasi,kvkk-aydinlatma"
+    },
+    "org_schema": {
+      "ok": true,
+      "detail": "site_title_broken=true has_correct_org=true"
+    },
+    "author": {
+      "ok": true,
+      "detail": "name=Avukat Ceren Sümer Cilli robots=noindex, follow"
+    },
+    "home_links": {
+      "ok": true,
+      "detail": "true,true,true,true,true"
+    },
+    "blog_301": {
+      "ok": true,
+      "detail": "301→/hizmetler/ target=200"
+    },
+    "menu": {
+      "ok": true,
+      "detail": "https://adanabosanmaavukati.org/adana-cekismeli-bosanma-avukati/ | https://adanabosanmaavukati.org/adanada-anlasmali-bosanma-avukati/ | https://adanabosanmaavukati.org/adana-nafaka-davasi-avukati/ | https://adanabosanmaavukati.org/adana-velayet-davasi/ | https://adanabosanmaavukati.org/bosanmada-mal-paylasimi-ve-katilma-alacagi/"
+    },
+    "og_home": {
+      "ok": true,
+      "detail": "https://adanabosanmaavukati.org/wp-content/uploads/2026/06/featured-bosanma-davasi-nasil-acilir.jpg"
+    },
+    "security_headers": {
+      "ok": false,
+      "detail": "hsts=MISSING xcto=MISSING rp=MISSING xfo=MISSING"
+    },
+    "http_https_www": {
+      "ok": true,
+      "detail": "www=301→https://adanabosanmaavukati.org/ http=301→https://adanabosanmaavukati.org/"
+    }
+  }
+}
