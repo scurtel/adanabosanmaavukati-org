@@ -11,7 +11,8 @@
     "deliller",
     "aile-hukuku-avukati",
     "tedbir-nafakasi",
-    "bosanma-dava-sureci"
+    "bosanma-dava-sureci",
+    "uzaklastirma-6284"
   ],
   "articles": [
     {
@@ -168,6 +169,19 @@
       "faqCount": 4,
       "internalLinkCount": 9,
       "date": "2026-07-22T05:25:07.058Z"
+    },
+    {
+      "topicId": "uzaklastirma-6284",
+      "wpId": 253,
+      "title": "6284 Sayılı Kanun Kapsamında Uzaklaştırma ve Koruma Kararı",
+      "slug": "bosanma-surecinde-uzaklastirma-ve-koruma-karari-6284",
+      "url": "https://adanabosanmaavukati.org/bosanma-surecinde-uzaklastirma-ve-koruma-karari-6284/",
+      "status": "publish",
+      "focusKeyword": "uzaklaştırma kararı",
+      "wordCount": 1293,
+      "faqCount": 5,
+      "internalLinkCount": 6,
+      "date": "2026-07-27T05:56:16.048Z"
     }
   ]
 }
