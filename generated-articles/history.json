@@ -12,7 +12,8 @@
     "aile-hukuku-avukati",
     "tedbir-nafakasi",
     "bosanma-dava-sureci",
-    "uzaklastirma-6284"
+    "uzaklastirma-6284",
+    "miras"
   ],
   "articles": [
     {
@@ -182,6 +183,19 @@
       "faqCount": 5,
       "internalLinkCount": 6,
       "date": "2026-07-27T05:56:16.048Z"
+    },
+    {
+      "topicId": "miras",
+      "wpId": 254,
+      "title": "Adana&#8217;da Miras Davası ve Mirasçıların Hakları Kapsamlı Rehber",
+      "slug": "adanada-miras-davasi-ve-mirascilarin-haklari",
+      "url": "https://adanabosanmaavukati.org/adanada-miras-davasi-ve-mirascilarin-haklari/",
+      "status": "publish",
+      "focusKeyword": "Adana miras avukatı",
+      "wordCount": 1426,
+      "faqCount": 4,
+      "internalLinkCount": 8,
+      "date": "2026-07-29T05:27:52.800Z"
     }
   ]
 }
