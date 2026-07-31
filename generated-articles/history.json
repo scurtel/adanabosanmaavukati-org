@@ -13,7 +13,8 @@
     "tedbir-nafakasi",
     "bosanma-dava-sureci",
     "uzaklastirma-6284",
-    "miras"
+    "miras",
+    "ortakligin-giderilmesi"
   ],
   "articles": [
     {
@@ -196,6 +197,19 @@
       "faqCount": 4,
       "internalLinkCount": 8,
       "date": "2026-07-29T05:27:52.800Z"
+    },
+    {
+      "topicId": "ortakligin-giderilmesi",
+      "wpId": 255,
+      "title": "İzale-i Şuyu: Ortaklığın Giderilmesi Davası Süreci",
+      "slug": "izale-i-suyu-ortakligin-giderilmesi-davasi-sureci",
+      "url": "https://adanabosanmaavukati.org/izale-i-suyu-ortakligin-giderilmesi-davasi-sureci/",
+      "status": "publish",
+      "focusKeyword": "ortaklığın giderilmesi davası",
+      "wordCount": 1311,
+      "faqCount": 4,
+      "internalLinkCount": 6,
+      "date": "2026-07-31T05:40:41.682Z"
     }
   ]
 }
