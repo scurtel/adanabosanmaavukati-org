@@ -14,7 +14,8 @@
     "bosanma-dava-sureci",
     "uzaklastirma-6284",
     "miras",
-    "ortakligin-giderilmesi"
+    "ortakligin-giderilmesi",
+    "aldatma-zina"
   ],
   "articles": [
     {
@@ -210,6 +211,19 @@
       "faqCount": 4,
       "internalLinkCount": 6,
       "date": "2026-07-31T05:40:41.682Z"
+    },
+    {
+      "topicId": "aldatma-zina",
+      "wpId": 256,
+      "title": "Aldatma (Zina) Nedeniyle Boşanma Davası ve Tazminat",
+      "slug": "aldatma-zina-nedeniyle-bosanma-davasi-ve-tazminat",
+      "url": "https://adanabosanmaavukati.org/aldatma-zina-nedeniyle-bosanma-davasi-ve-tazminat/",
+      "status": "publish",
+      "focusKeyword": "zina nedeniyle boşanma",
+      "wordCount": 1133,
+      "faqCount": 4,
+      "internalLinkCount": 7,
+      "date": "2026-08-03T05:47:52.877Z"
     }
   ]
 }
