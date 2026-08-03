@@ -37,6 +37,8 @@ jobs:
           WP_POST_STATUS: publish
         run: npm run generate:auto-article
 
+      # history.json yalnızca başarılı üretimde güncellenir.
+      # Kalite uyarıları generate'i düşürmez; commit/push devam eder.
       - name: Commit updated history
         run: |
           git config user.name "github-actions[bot]"

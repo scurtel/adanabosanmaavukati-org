@@ -70,6 +70,10 @@ const TOPICS = [
   { id: 'cekismeli-sure', title: "Çekişmeli Boşanma Ne Kadar Sürer? Süreci Etkileyen Faktörler", slug: 'cekismeli-bosanma-ne-kadar-surer-etkileyen-faktorler', focusKeyword: 'çekişmeli boşanma süresi', categories: ['Boşanma Davaları', 'Aile Hukuku'] },
 ];
 
+function warnQuality(message) {
+  console.warn(`::warning title=Makale kalite uyarısı::${message}`);
+}
+
 function fail(message) {
   console.error(`HATA: ${message}`);
   process.exit(1);
@@ -197,9 +201,19 @@ async function generateArticle(topic, internalLinks) {
     }
 
     // 2. deneme: tüm kalite kriterleri yalnızca ÖNERİDİR; hiçbiri yayını engellemez.
-    if (!inTarget) console.log('Not: kelime sayısı öneri dışında ancak kabul ediliyor (kesin sınır yok).');
-    if ((article.faq || []).length < 4) console.log('Not: 4\'ten az FAQ üretildi ancak kabul ediliyor (öneri).');
-    if (!article.bodyHtml) console.log('Uyarı: gövde (bodyHtml) boş geldi; yine de devam ediliyor.');
+    if (!inTarget) {
+      warnQuality(
+        `Kelime sayısı hedef aralığında değil. Hedef ${TARGET_MIN}-${TARGET_MAX}, mevcut: ${wc}. Makale yine de yayınlanacak.`,
+      );
+    }
+    if ((article.faq || []).length < 4) {
+      warnQuality(
+        `FAQ sayısı hedefin altında (${(article.faq || []).length}; hedef ≥4). Yine de yayınlanıyor.`,
+      );
+    }
+    if (!article.bodyHtml || !String(article.bodyHtml).trim()) {
+      throw new Error('Gövde (bodyHtml) boş — teknik hata, yayınlanamaz');
+    }
     return article;
   }
   return last;
@@ -338,17 +352,40 @@ async function main() {
 
   const article = await generateArticle(topic, internalLinks);
 
-  // Önerilmeyen ifade kontrolü — yalnızca uyarı; yayını ENGELLEMEZ.
-  const lc = `${article.title} ${article.bodyHtml}`.toLowerCase();
-  const banHits = BANNED.filter((b) => lc.includes(b));
-  if (banHits.length) {
-    console.warn(`Uyarı: içerikte önerilmeyen ifade(ler) var: ${banHits.map((b) => `"${b}"`).join(', ')} — yine de yayınlanıyor.`);
+  // Yasaklı ifadeler: yalnızca tespit + GHA warning. Sanitize / silme / retry / red yok.
+  {
+    const articleText = `${article.title || ''} ${article.bodyHtml || ''} ${article.metaDescription || ''} ${article.excerpt || ''}`;
+    const banHits = BANNED.filter((b) =>
+      articleText.toLocaleLowerCase('tr-TR').includes(String(b).toLocaleLowerCase('tr-TR')),
+    );
+    for (const phrase of banHits) {
+      console.warn(
+        `::warning title=Yasaklı ifade uyarısı::Makalede kontrol listesindeki ifade bulundu: ${phrase}. İçerik değiştirilmeden yayınlanıyor.`,
+      );
+    }
+  }
+
+  if (!article.title && !topic.title) {
+    throw new Error('Başlık üretilemedi — teknik hata');
   }
 
   const slug = await ensureUniqueSlug(topic.slug);
   const content = buildContent(article, topic);
+  if (!String(content).trim()) {
+    throw new Error('Birleştirilmiş içerik boş — teknik hata');
+  }
   const internalLinkCount = (content.match(/href="https?:\/\/[^"]*adanabosanmaavukati\.org/gi) || []).length;
   console.log(`Gövdedeki iç link sayısı: ${internalLinkCount}`);
+  if (internalLinkCount === 0) {
+    warnQuality('Gövdeye site içi link eklenemedi (0 iç link). Yayın devam ediyor.');
+  }
+
+  const desc = article.metaDescription || article.excerpt || '';
+  if (!desc) {
+    warnQuality('Meta description / excerpt eksik.');
+  } else if (desc.length < 120 || desc.length > 170) {
+    warnQuality(`Meta description uzunluğu hedef dışı (${desc.length} karakter; hedef 145-160).`);
+  }
 
   const categoryIds = await matchCategoryIds(topic.categories);
   const focusTagId = await ensureTagId(topic.focusKeyword);
