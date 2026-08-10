@@ -15,7 +15,8 @@
     "uzaklastirma-6284",
     "miras",
     "ortakligin-giderilmesi",
-    "aldatma-zina"
+    "aldatma-zina",
+    "terk"
   ],
   "articles": [
     {
@@ -224,6 +225,19 @@
       "faqCount": 4,
       "internalLinkCount": 7,
       "date": "2026-08-03T05:47:52.877Z"
+    },
+    {
+      "topicId": "terk",
+      "wpId": 257,
+      "title": "Terk Nedeniyle Boşanma Davası ve İhtar Şartı",
+      "slug": "terk-nedeniyle-bosanma-davasi-ve-ihtar-sarti",
+      "url": "https://adanabosanmaavukati.org/terk-nedeniyle-bosanma-davasi-ve-ihtar-sarti/",
+      "status": "publish",
+      "focusKeyword": "terk nedeniyle boşanma",
+      "wordCount": 1537,
+      "faqCount": 4,
+      "internalLinkCount": 5,
+      "date": "2026-08-10T04:01:29.748Z"
     }
   ]
 }
