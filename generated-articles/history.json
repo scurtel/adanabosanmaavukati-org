@@ -16,7 +16,8 @@
     "miras",
     "ortakligin-giderilmesi",
     "aldatma-zina",
-    "terk"
+    "terk",
+    "siddetli-gecimsizlik"
   ],
   "articles": [
     {
@@ -238,6 +239,19 @@
       "faqCount": 4,
       "internalLinkCount": 5,
       "date": "2026-08-10T04:01:29.748Z"
+    },
+    {
+      "topicId": "siddetli-gecimsizlik",
+      "wpId": 258,
+      "title": "Evlilik Birliğinin Temelinden Sarsılması: Şiddetli Geçimsizlik ve Boşanma",
+      "slug": "evlilik-birliginin-temelinden-sarsilmasi-bosanma",
+      "url": "https://adanabosanmaavukati.org/evlilik-birliginin-temelinden-sarsilmasi-bosanma/",
+      "status": "publish",
+      "focusKeyword": "şiddetli geçimsizlik nedeniyle boşanma",
+      "wordCount": 1448,
+      "faqCount": 4,
+      "internalLinkCount": 12,
+      "date": "2026-08-12T04:12:25.863Z"
     }
   ]
 }
