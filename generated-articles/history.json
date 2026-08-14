@@ -17,7 +17,8 @@
     "ortakligin-giderilmesi",
     "aldatma-zina",
     "terk",
-    "siddetli-gecimsizlik"
+    "siddetli-gecimsizlik",
+    "bosanma-sgk-tazminat"
   ],
   "articles": [
     {
@@ -252,6 +253,19 @@
       "faqCount": 4,
       "internalLinkCount": 12,
       "date": "2026-08-12T04:12:25.863Z"
+    },
+    {
+      "topicId": "bosanma-sgk-tazminat",
+      "wpId": 259,
+      "title": "Boşanmada SGK, Dul-Yetim Aylığı ve Tazminat İlişkisi",
+      "slug": "bosanmada-sgk-dul-yetim-ayligi-ve-tazminat",
+      "url": "https://adanabosanmaavukati.org/bosanmada-sgk-dul-yetim-ayligi-ve-tazminat/",
+      "status": "publish",
+      "focusKeyword": "boşanma ve dul aylığı",
+      "wordCount": 1269,
+      "faqCount": 5,
+      "internalLinkCount": 8,
+      "date": "2026-08-14T04:12:59.115Z"
     }
   ]
 }
