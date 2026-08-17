@@ -18,7 +18,8 @@
     "aldatma-zina",
     "terk",
     "siddetli-gecimsizlik",
-    "bosanma-sgk-tazminat"
+    "bosanma-sgk-tazminat",
+    "anlasmali-protokol"
   ],
   "articles": [
     {
@@ -266,6 +267,19 @@
       "faqCount": 5,
       "internalLinkCount": 8,
       "date": "2026-08-14T04:12:59.115Z"
+    },
+    {
+      "topicId": "anlasmali-protokol",
+      "wpId": 260,
+      "title": "Anlaşmalı Boşanma Protokolünde Bulunması Gereken Temel Unsurlar",
+      "slug": "anlasmali-bosanma-protokolunde-bulunmasi-gerekenler",
+      "url": "https://adanabosanmaavukati.org/anlasmali-bosanma-protokolunde-bulunmasi-gerekenler/",
+      "status": "publish",
+      "focusKeyword": "anlaşmalı boşanma protokolü",
+      "wordCount": 1243,
+      "faqCount": 5,
+      "internalLinkCount": 10,
+      "date": "2026-08-17T03:03:56.751Z"
     }
   ]
 }
