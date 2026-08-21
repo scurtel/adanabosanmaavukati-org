@@ -43,24 +43,6 @@ add_filter('rank_math/json_ld', function ($data, $jsonld) {
         if (!is_array($node)) {
             return $node;
         }
-        $is_list = $node === array() || array_keys($node) === range(0, count($node) - 1);
-        if ($is_list) {
-            $out = array();
-            $seen = false;
-            foreach ($node as $child) {
-                $child = $rewrite($child);
-                $c_types = is_array($child) && isset($child['@type']) ? (array) $child['@type'] : array();
-                $c_id = is_array($child) && isset($child['@id']) ? $child['@id'] : '';
-                if (in_array('Person', $c_types, true) && $c_id === $person_id) {
-                    if ($seen) {
-                        continue;
-                    }
-                    $seen = true;
-                }
-                $out[] = $child;
-            }
-            return $out;
-        }
         $types = isset($node['@type']) ? (array) $node['@type'] : array();
         if (in_array('Person', $types, true)) {
             $id = isset($node['@id']) ? (string) $node['@id'] : '';
@@ -81,10 +63,25 @@ add_filter('rank_math/json_ld', function ($data, $jsonld) {
                 }
             }
         }
-        foreach ($node as $key => $value) {
-            if (is_array($value)) {
-                $node[$key] = $rewrite($value);
+        if (isset($node['author'])) {
+            $node['author'] = $rewrite($node['author']);
+        }
+        if (isset($node['@graph']) && is_array($node['@graph'])) {
+            $out = array();
+            $seen = false;
+            foreach ($node['@graph'] as $child) {
+                $child = $rewrite($child);
+                $c_types = is_array($child) && isset($child['@type']) ? (array) $child['@type'] : array();
+                $c_id = is_array($child) && isset($child['@id']) ? $child['@id'] : '';
+                if (in_array('Person', $c_types, true) && $c_id === $person_id) {
+                    if ($seen) {
+                        continue;
+                    }
+                    $seen = true;
+                }
+                $out[] = $child;
             }
+            $node['@graph'] = $out;
         }
         return $node;
     };
@@ -93,6 +90,6 @@ add_filter('rank_math/json_ld', function ($data, $jsonld) {
         $data[$key] = $rewrite($piece);
     }
     return $data;
-}, 999, 2);
+}, 99, 2);
 `;
 }
