@@ -19,7 +19,8 @@
     "terk",
     "siddetli-gecimsizlik",
     "bosanma-sgk-tazminat",
-    "anlasmali-protokol"
+    "anlasmali-protokol",
+    "nafaka-artirim"
   ],
   "articles": [
     {
@@ -280,6 +281,19 @@
       "faqCount": 5,
       "internalLinkCount": 10,
       "date": "2026-08-17T03:03:56.751Z"
+    },
+    {
+      "topicId": "nafaka-artirim",
+      "wpId": 261,
+      "title": "Nafaka Artırım ve Azaltım Davası: Şartlar, Süreç ve Adana Uygulamaları",
+      "slug": "nafaka-artirim-ve-azaltim-davasi-sartlar",
+      "url": "https://adanabosanmaavukati.org/nafaka-artirim-ve-azaltim-davasi-sartlar/",
+      "status": "publish",
+      "focusKeyword": "nafaka artırım davası",
+      "wordCount": 1387,
+      "faqCount": 5,
+      "internalLinkCount": 6,
+      "date": "2026-08-21T03:07:37.408Z"
     }
   ]
 }
