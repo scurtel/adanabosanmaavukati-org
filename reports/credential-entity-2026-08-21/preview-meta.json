@@ -1,0 +1,17 @@
+{
+  "generated_at": "2026-08-21T16:00:13.089Z",
+  "live_wp_write": false,
+  "profile_url": "https://adanabosanmaavukati.org/avukat-ceren-sumer-cilli/",
+  "person_id": "https://adanabosanmaavukati.org/avukat-ceren-sumer-cilli/#person",
+  "canonical_person_url": "https://www.cerensumer.av.tr/av-ceren-sumer-cilli/",
+  "milliyet": "https://blog.milliyet.com.tr/avcerensumercilli",
+  "sameAs": [
+    "https://www.cerensumer.av.tr/av-ceren-sumer-cilli/",
+    "https://blog.milliyet.com.tr/avcerensumercilli",
+    "https://www.linkedin.com/in/avukat-ceren-s%C3%BCmer-cilli-375873b0/",
+    "https://www.instagram.com/av.cerensumercilli/",
+    "https://www.facebook.com/cerensumercilli/"
+  ],
+  "privacy_hits": [],
+  "note": "Canlı uygulama için scripts/apply-ceren-credentials.mjs --execute gerekir; bu dosya yalnızca yerel taslaktır."
+}

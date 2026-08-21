@@ -157,7 +157,8 @@ function buildContactContent() {
     { "@type": "AdministrativeArea", "name": "Yüreğir" }
   ],
   "sameAs": [
-    "https://www.cerensumer.av.tr/adana-bosanma-avukati-ceren-sumer-cilli-kimdir/",
+    "https://www.cerensumer.av.tr/av-ceren-sumer-cilli/",
+    "https://blog.milliyet.com.tr/avcerensumercilli",
     "https://www.linkedin.com/in/avukat-ceren-s%C3%BCmer-cilli-375873b0/",
     "https://www.instagram.com/av.cerensumercilli/",
     "https://www.facebook.com/cerensumercilli/"

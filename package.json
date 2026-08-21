@@ -25,7 +25,9 @@
     "plan:links": "node scripts/internal-link-plan.mjs",
     "generate:auto-article": "node scripts/generate-wp-article.mjs",
     "test:auto-article-resilience": "node scripts/test-auto-article-resilience.mjs",
-    "apply:critical-fixes": "node scripts/apply-critical-fixes-2026-07-22.mjs"
+    "apply:critical-fixes": "node scripts/apply-critical-fixes-2026-07-22.mjs",
+    "preview:credentials": "node scripts/preview-credential-entity.mjs",
+    "apply:credentials:dry": "node scripts/apply-ceren-credentials.mjs"
   },
   "engines": {
     "node": ">=18"
