@@ -129,7 +129,7 @@ function buildSchema(post, meta) {
       author: {
         '@type': 'Person',
         '@id': `${BASE()}/avukat-ceren-sumer-cilli/#person`,
-        name: 'Ceren Sümer Cilli',
+        name: 'Av. Ceren Sümer Cilli',
         url: `${BASE()}/avukat-ceren-sumer-cilli/`,
         sameAs: ['https://www.cerensumer.av.tr/av-ceren-sumer-cilli/'],
       },
