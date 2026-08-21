@@ -27,6 +27,7 @@
     "test:auto-article-resilience": "node scripts/test-auto-article-resilience.mjs",
     "apply:critical-fixes": "node scripts/apply-critical-fixes-2026-07-22.mjs",
     "preview:credentials": "node scripts/preview-credential-entity.mjs",
+    "preview:round2": "node scripts/preview-round2-entity-cleanup.mjs",
     "apply:credentials:dry": "node scripts/apply-ceren-credentials.mjs"
   },
   "engines": {

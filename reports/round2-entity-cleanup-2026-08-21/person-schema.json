@@ -1,0 +1,87 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfilePage",
+      "@id": "https://adanabosanmaavukati.org/avukat-ceren-sumer-cilli/#profilepage",
+      "url": "https://adanabosanmaavukati.org/avukat-ceren-sumer-cilli/",
+      "name": "Avukat Ceren Sümer Cilli",
+      "isPartOf": {
+        "@id": "https://adanabosanmaavukati.org/#website"
+      },
+      "mainEntity": {
+        "@id": "https://adanabosanmaavukati.org/avukat-ceren-sumer-cilli/#person"
+      },
+      "about": {
+        "@id": "https://adanabosanmaavukati.org/avukat-ceren-sumer-cilli/#person"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://adanabosanmaavukati.org/avukat-ceren-sumer-cilli/#person",
+      "name": "Ceren Sümer Cilli",
+      "honorificPrefix": "Av.",
+      "alternateName": [
+        "Avukat Ceren Sümer Cilli",
+        "Av. Ceren Sümer Cilli"
+      ],
+      "jobTitle": "Avukat",
+      "description": "Adana’da boşanma hukuku, aile hukuku, mal rejimleri ve arabuluculuk alanlarında çalışan avukat. Dokuz Eylül Üniversitesi Hukuk Fakültesi mezunu.",
+      "url": "https://adanabosanmaavukati.org/avukat-ceren-sumer-cilli/",
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Dokuz Eylül Üniversitesi Hukuk Fakültesi"
+      },
+      "worksFor": {
+        "@id": "https://adanabosanmaavukati.org/#legalservice"
+      },
+      "knowsAbout": [
+        "Aile Hukuku",
+        "Boşanma Hukuku",
+        "Mal Rejimleri",
+        "Miras Hukuku",
+        "Velayet",
+        "Nafaka",
+        "Arabuluculuk"
+      ],
+      "sameAs": [
+        "https://www.cerensumer.av.tr/av-ceren-sumer-cilli/",
+        "https://blog.milliyet.com.tr/avcerensumercilli",
+        "https://www.linkedin.com/in/avukat-ceren-s%C3%BCmer-cilli-375873b0/",
+        "https://www.instagram.com/av.cerensumercilli/",
+        "https://www.facebook.com/cerensumercilli/"
+      ]
+    },
+    {
+      "@type": "LegalService",
+      "@id": "https://adanabosanmaavukati.org/#legalservice",
+      "name": "Avukat Ceren Sümer Cilli - Adana Boşanma Avukatı",
+      "url": "https://adanabosanmaavukati.org",
+      "employee": {
+        "@id": "https://adanabosanmaavukati.org/avukat-ceren-sumer-cilli/#person"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Adana"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://adanabosanmaavukati.org/avukat-ceren-sumer-cilli/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Ana Sayfa",
+          "item": "https://adanabosanmaavukati.org/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Avukat Ceren Sümer Cilli",
+          "item": "https://adanabosanmaavukati.org/avukat-ceren-sumer-cilli/"
+        }
+      ]
+    }
+  ]
+}

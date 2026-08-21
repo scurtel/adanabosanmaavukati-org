@@ -1,0 +1,20 @@
+{
+  "generated_at": "2026-08-21T16:40:10.123Z",
+  "live_wp_write": false,
+  "contentH1Count": 1,
+  "note": "Canlıda tema ayrıca h1.entry-title basıyor. PHP snippet Astra title’ı kapatınca DOM H1=1 olur.",
+  "person": {
+    "id": "https://adanabosanmaavukati.org/avukat-ceren-sumer-cilli/#person",
+    "name": "Ceren Sümer Cilli",
+    "jobTitle": "Avukat",
+    "sameAs": [
+      "https://www.cerensumer.av.tr/av-ceren-sumer-cilli/",
+      "https://blog.milliyet.com.tr/avcerensumercilli",
+      "https://www.linkedin.com/in/avukat-ceren-s%C3%BCmer-cilli-375873b0/",
+      "https://www.instagram.com/av.cerensumercilli/",
+      "https://www.facebook.com/cerensumercilli/"
+    ]
+  },
+  "PERSON_SCHEMA_NAME": "Ceren Sümer Cilli",
+  "fails": []
+}
