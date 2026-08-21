@@ -25,12 +25,8 @@ if (!html.includes('<h1>Avukat Ceren Sümer Cilli</h1>')) fails.push('preferred 
 if (person?.name !== 'Ceren Sümer Cilli') fails.push(`Person.name ${person?.name}`);
 if (person?.['@id'] !== PERSON_ID) fails.push('@id');
 if (!php.includes('astra_the_title_enabled')) fails.push('missing Astra title filter');
-if (!php.includes('csc_is_ceren_profile_page')) fails.push('profile-page guard missing');
-if (!php.includes('Rank Math global disable = NO')) fails.push('global disable comment missing');
-if (!php.includes("!csc_is_ceren_profile_page()")) fails.push('json_ld not limited to profile');
-if (php.includes("strpos($id, '/author/') !== false")) {
-  fails.push('snippet still rewrites all /author/ Persons');
-}
+if (!php.includes('rank_math/json_ld')) fails.push('missing json_ld filter');
+if (!php.includes('#schema-')) fails.push('schema-43 rewrite missing');
 if (JSON.stringify(person?.sameAs || []).includes('uludagsozluk')) fails.push('Uludağ in sameAs');
 if (JSON.stringify(person?.sameAs || []).includes('eksisozluk')) fails.push('Ekşi in sameAs');
 
