@@ -6,6 +6,10 @@ on:
     # Pazartesi, Çarşamba, Cuma — Türkiye saati 05:00 (UTC+3) => 02:00 UTC
     - cron: "0 2 * * 1,3,5"
 
+concurrency:
+  group: auto-article-wordpress
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
@@ -25,7 +29,13 @@ jobs:
         run: npm ci || npm install
 
       - name: Syntax check
-        run: node --check scripts/generate-wp-article.mjs
+        run: |
+          node --check scripts/generate-wp-article.mjs
+          node --check scripts/lib/gemini.mjs
+          node --check scripts/lib/fetch-retry.mjs
+
+      - name: Offline resilience tests
+        run: npm run test:auto-article-resilience
 
       - name: Generate and publish article
         env:
@@ -37,7 +47,7 @@ jobs:
           WP_POST_STATUS: publish
         run: npm run generate:auto-article
 
-      # history.json yalnızca başarılı üretimde güncellenir.
+      # history.json yalnızca başarılı üretimde (script içinde) güncellenir.
       # Kalite uyarıları generate'i düşürmez; commit/push devam eder.
       - name: Commit updated history
         run: |

@@ -1,4 +1,5 @@
 import { getGeminiConfig } from './env.mjs';
+import { fetchWithRetry } from './fetch-retry.mjs';
 
 export function extractGroundingMetadata(data) {
   const gm = data?.candidates?.[0]?.groundingMetadata;
@@ -18,6 +19,67 @@ export function extractGroundingMetadata(data) {
     groundingSupports: gm.groundingSupports || [],
     searchEntryPoint: gm.searchEntryPoint || null,
   };
+}
+
+/**
+ * Extract and parse a JSON value from Gemini text that may include fences or prose.
+ * Exported for unit-style offline tests.
+ */
+export function parseGeminiJsonText(text) {
+  const raw = String(text || '').trim();
+  if (!raw) throw new Error('Gemini boş yanıt döndü.');
+
+  // 1) Direct parse
+  try {
+    return JSON.parse(raw);
+  } catch {
+    /* continue */
+  }
+
+  // 2) Fenced ```json ... ```
+  const fenced = raw.match(/```(?:json)?\s*([\s\S]*?)```/i);
+  if (fenced) {
+    try {
+      return JSON.parse(fenced[1].trim());
+    } catch {
+      /* continue */
+    }
+  }
+
+  // 3) First balanced {...} object in the text
+  const start = raw.indexOf('{');
+  if (start !== -1) {
+    let depth = 0;
+    let inString = false;
+    let escape = false;
+    for (let i = start; i < raw.length; i++) {
+      const ch = raw[i];
+      if (inString) {
+        if (escape) escape = false;
+        else if (ch === '\\') escape = true;
+        else if (ch === '"') inString = false;
+        continue;
+      }
+      if (ch === '"') {
+        inString = true;
+        continue;
+      }
+      if (ch === '{') depth++;
+      else if (ch === '}') {
+        depth--;
+        if (depth === 0) {
+          const slice = raw.slice(start, i + 1);
+          try {
+            return JSON.parse(slice);
+          } catch {
+            break;
+          }
+        }
+      }
+    }
+  }
+
+  throw new Error('Gemini JSON yanıtı ayrıştırılamadı.');
 }
 
 export async function callGemini(
@@ -54,10 +116,14 @@ export async function callGemini(
     body.tools = [{ google_search: {} }];
   }
 
-  const res = await fetch(url, {
+  const res = await fetchWithRetry(url, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(body),
+    label: 'Gemini API',
+    retries: 3,
+    timeoutMs: 90000,
+    retryOn403Html: false,
   });
 
   if (!res.ok) {
@@ -76,14 +142,7 @@ export async function callGemini(
     return text;
   }
 
-  let parsed;
-  try {
-    parsed = JSON.parse(text);
-  } catch {
-    const fenced = text.match(/```(?:json)?\s*([\s\S]*?)```/);
-    if (fenced) parsed = JSON.parse(fenced[1]);
-    else throw new Error('Gemini JSON yanıtı ayrıştırılamadı.');
-  }
+  const parsed = parseGeminiJsonText(text);
 
   if (includeGrounding) {
     return { data: parsed, grounding: groundingMeta };

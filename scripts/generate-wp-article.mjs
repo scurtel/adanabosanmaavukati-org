@@ -5,9 +5,11 @@
 
 import { existsSync, readFileSync, writeFileSync, mkdirSync } from 'fs';
 import { resolve, dirname } from 'path';
-import { fileURLToPath } from 'url';
+import { fileURLToPath, pathToFileURL } from 'url';
 // lib/gemini.mjs import edildiğinde lib/env.mjs üzerinden .env (varsa) yüklenir.
 import { callGemini, getGeminiModel } from './lib/gemini.mjs';
+import { fetchWithRetry, sleep, classifyHttpError } from './lib/fetch-retry.mjs';
+import { validateArticlePayload } from './lib/article-schema.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
@@ -31,6 +33,9 @@ const GEMINI_API_KEY =
 // ---- Kelime sayısı (yalnızca ÖNERİ; kesin sınır yok) ----
 const TARGET_MIN = 1000;
 const TARGET_MAX = 1300;
+const GEMINI_ATTEMPTS = 3;
+const GEMINI_RETRY_DELAYS_MS = [2000, 5000, 10000];
+const WP_PUBLISH_RETRY_DELAYS_MS = [5000, 15000, 30000];
 
 const BANNED = [
   'en iyi', 'kesin kazan', 'garanti', 'en hızlı', 'uzman avukat', 'lider avukat',
@@ -74,8 +79,9 @@ function warnQuality(message) {
   console.warn(`::warning title=Makale kalite uyarısı::${message}`);
 }
 
-function fail(message) {
+function fail(message, errorType = 'UNKNOWN') {
   console.error(`HATA: ${message}`);
+  console.error(`ERROR_TYPE=${errorType}`);
   process.exit(1);
 }
 
@@ -87,8 +93,9 @@ function checkEnv() {
   if (missing.length) {
     fail(
       `Eksik ortam değişkenleri: ${missing.join(', ')}.\n` +
-      `Yerelde .env dosyası oluşturun (.env.example dosyasını kopyalayın) ya da GitHub Actions secrets tanımlayın.\n` +
-      `Gizli değerler asla koda yazılmamalı, yalnızca ortam değişkeni olarak verilmelidir.`
+        `Yerelde .env dosyası oluşturun (.env.example dosyasını kopyalayın) ya da GitHub Actions secrets tanımlayın.\n` +
+        `Gizli değerler asla koda yazılmamalı, yalnızca ortam değişkeni olarak verilmelidir.`,
+      'MISSING_ENV',
     );
   }
 }
@@ -170,53 +177,86 @@ YANIT FORMATI: Yalnızca aşağıdaki şemada GEÇERLİ JSON döndür (başka me
 }
 
 async function generateOnce(topic, internalLinks) {
-  const enhanced = await callGemini(buildPrompt(topic, internalLinks), {
+  // forceJson: true → responseMimeType=application/json (grounding ile JSON mime çakışmasını önler)
+  return callGemini(buildPrompt(topic, internalLinks), {
     json: true,
+    forceJson: true,
     temperature: 0.5,
     maxOutputTokens: 16384,
   });
-  return enhanced;
 }
 
 async function generateArticle(topic, internalLinks) {
-  let last;
-  for (let attempt = 1; attempt <= 2; attempt++) {
-    const article = await generateOnce(topic, internalLinks);
-    last = article;
-    const faqText = (article.faq || []).map((f) => `${f.question} ${f.answer}`).join(' ');
-    const wc = wordCount(`${article.bodyHtml || ''} ${faqText}`);
-    article._wordCount = wc;
+  let lastQualityArticle = null;
+  let lastError = null;
 
-    const idealStructure = !!article.bodyHtml && (article.faq || []).length >= 4;
-    const inTarget = wc >= TARGET_MIN && wc <= TARGET_MAX;
-    console.log(`Deneme ${attempt}: kelime sayısı = ${wc} (öneri: ${TARGET_MIN}-${TARGET_MAX}${inTarget ? '' : ' — öneri dışı'})`);
+  for (let attempt = 1; attempt <= GEMINI_ATTEMPTS; attempt++) {
+    try {
+      const article = await generateOnce(topic, internalLinks);
+      const schemaErrors = validateArticlePayload(article);
+      if (schemaErrors.length) {
+        console.warn(`Gemini attempt ${attempt}/${GEMINI_ATTEMPTS}: invalid schema (${schemaErrors.join('; ')})`);
+        lastError = new Error(`GEMINI_INVALID_SCHEMA: ${schemaErrors.join('; ')}`);
+        if (attempt < GEMINI_ATTEMPTS) {
+          await sleep(GEMINI_RETRY_DELAYS_MS[attempt - 1] || 10000);
+          continue;
+        }
+        break;
+      }
 
-    // İdeal durum: yapı tamam ve öneri aralığında → hemen kabul.
-    if (idealStructure && inTarget) return article;
+      const faqText = (article.faq || []).map((f) => `${f.question} ${f.answer}`).join(' ');
+      const wc = wordCount(`${article.bodyHtml || ''} ${faqText}`);
+      article._wordCount = wc;
 
-    // İlk denemede ideal değilse, öneriye yaklaşmak için bir kez daha dene.
-    if (attempt === 1) {
-      console.log('Öneri aralığı dışında veya eksik FAQ — kaliteyi iyileştirmek için bir kez daha deneniyor...');
-      continue;
-    }
-
-    // 2. deneme: tüm kalite kriterleri yalnızca ÖNERİDİR; hiçbiri yayını engellemez.
-    if (!inTarget) {
-      warnQuality(
-        `Kelime sayısı hedef aralığında değil. Hedef ${TARGET_MIN}-${TARGET_MAX}, mevcut: ${wc}. Makale yine de yayınlanacak.`,
+      const idealStructure = (article.faq || []).length >= 4;
+      const inTarget = wc >= TARGET_MIN && wc <= TARGET_MAX;
+      console.log(
+        `Gemini attempt ${attempt}/${GEMINI_ATTEMPTS}: success (words=${wc}, faq=${(article.faq || []).length}${inTarget ? '' : ', outside word target'})`,
       );
-    }
-    if ((article.faq || []).length < 4) {
-      warnQuality(
-        `FAQ sayısı hedefin altında (${(article.faq || []).length}; hedef ≥4). Yine de yayınlanıyor.`,
+
+      if (idealStructure && inTarget) return article;
+
+      lastQualityArticle = article;
+      // One quality retry only (attempt 1 → try again for better length/FAQ)
+      if (attempt === 1 && (!idealStructure || !inTarget)) {
+        console.log('Öneri aralığı dışında veya eksik FAQ — kaliteyi iyileştirmek için bir kez daha deneniyor...');
+        await sleep(GEMINI_RETRY_DELAYS_MS[0]);
+        continue;
+      }
+
+      // Quality issues are warnings only — publish continues.
+      if (!inTarget) {
+        warnQuality(
+          `Kelime sayısı hedef aralığında değil. Hedef ${TARGET_MIN}-${TARGET_MAX}, mevcut: ${wc}. Makale yine de yayınlanacak.`,
+        );
+      }
+      if ((article.faq || []).length < 4) {
+        warnQuality(
+          `FAQ sayısı hedefin altında (${(article.faq || []).length}; hedef ≥4). Yine de yayınlanıyor.`,
+        );
+      }
+      return article;
+    } catch (err) {
+      lastError = err;
+      const msg = String(err.message || err);
+      const isParse = /JSON yanıtı ayrıştırılamadı|boş yanıt/i.test(msg);
+      console.warn(
+        `Gemini attempt ${attempt}/${GEMINI_ATTEMPTS}: ${isParse ? 'invalid JSON' : 'error'} (${msg.slice(0, 120)})`,
       );
+      if (attempt < GEMINI_ATTEMPTS) {
+        await sleep(GEMINI_RETRY_DELAYS_MS[attempt - 1] || 10000);
+      }
     }
-    if (!article.bodyHtml || !String(article.bodyHtml).trim()) {
-      throw new Error('Gövde (bodyHtml) boş — teknik hata, yayınlanamaz');
-    }
-    return article;
   }
-  return last;
+
+  if (lastQualityArticle && validateArticlePayload(lastQualityArticle).length === 0) {
+    warnQuality('Gemini kalite hedefi tutturulamadı; son geçerli payload ile devam ediliyor.');
+    return lastQualityArticle;
+  }
+
+  const err = lastError || new Error('Gemini üretimi başarısız');
+  err.errorType = /JSON/i.test(String(err.message)) ? 'GEMINI_INVALID_JSON' : 'GEMINI_FAILED';
+  throw err;
 }
 
 // ---- WordPress REST yardımcıları ----
@@ -227,9 +267,27 @@ function wpAuthHeader() {
 
 async function wp(path, options = {}) {
   const url = path.startsWith('http') ? path : `${WP_BASE_URL}${path}`;
-  return fetch(url, {
-    ...options,
-    headers: { Accept: 'application/json', Authorization: wpAuthHeader(), ...(options.headers || {}) },
+  const {
+    retries = 3,
+    retryOn403Html = true,
+    timeoutMs = 45000,
+    label = `WP ${options.method || 'GET'} ${path.split('?')[0]}`,
+    retryDelaysMs,
+    ...fetchOptions
+  } = options;
+
+  return fetchWithRetry(url, {
+    ...fetchOptions,
+    headers: {
+      Accept: 'application/json',
+      Authorization: wpAuthHeader(),
+      ...(fetchOptions.headers || {}),
+    },
+    retries,
+    retryOn403Html,
+    timeoutMs,
+    label,
+    retryDelaysMs,
   });
 }
 
@@ -244,20 +302,39 @@ function decodeEntities(s) {
     .trim();
 }
 
+async function findPostsBySlug(slug) {
+  try {
+    const res = await wp(
+      `/wp-json/wp/v2/posts?slug=${encodeURIComponent(slug)}&status=publish,draft,pending,future,private&per_page=10`,
+      { label: `WP find slug ${slug}`, retries: 3, retryOn403Html: true },
+    );
+    if (!res.ok) return [];
+    const arr = await res.json();
+    return Array.isArray(arr) ? arr : [];
+  } catch (err) {
+    console.warn(`Slug lookup failed (${err.message}); continuing.`);
+    return [];
+  }
+}
+
 // Mevcut yayındaki yazı/sayfaları çekip iç link adaylarını döndürür (salt-okunur).
 async function fetchInternalLinks(limit = 40) {
   const out = [];
   for (const ep of ['posts', 'pages']) {
     try {
-      const res = await wp(`/wp-json/wp/v2/${ep}?status=publish&per_page=100&_fields=title,link`);
+      const res = await wp(`/wp-json/wp/v2/${ep}?status=publish&per_page=100&_fields=title,link`, {
+        label: `WP list ${ep}`,
+        retries: 3,
+        retryOn403Html: true,
+      });
       if (!res.ok) continue;
       const arr = await res.json();
       for (const it of arr) {
         const title = decodeEntities(it.title?.rendered);
         if (it.link && title) out.push({ title, url: it.link });
       }
-    } catch {
-      /* iç link çekilemezse linksiz devam et */
+    } catch (err) {
+      console.warn(`İç link adayları alınamadı (${ep}): ${err.message} — linksiz devam.`);
     }
   }
   const seen = new Set();
@@ -266,33 +343,51 @@ async function fetchInternalLinks(limit = 40) {
 
 async function ensureUniqueSlug(slug) {
   for (const ep of ['posts', 'pages']) {
-    const res = await wp(`/wp-json/wp/v2/${ep}?slug=${encodeURIComponent(slug)}&status=publish,draft,pending,future,private&per_page=100`);
-    if (res.ok) {
-      const arr = await res.json();
-      if (Array.isArray(arr) && arr.length) {
-        const suffix = new Date().getFullYear();
-        return `${slug}-${suffix}`;
+    try {
+      const res = await wp(
+        `/wp-json/wp/v2/${ep}?slug=${encodeURIComponent(slug)}&status=publish,draft,pending,future,private&per_page=100`,
+        { label: `WP unique-slug ${ep}`, retries: 3 },
+      );
+      if (res.ok) {
+        const arr = await res.json();
+        if (Array.isArray(arr) && arr.length) {
+          const suffix = new Date().getFullYear();
+          return `${slug}-${suffix}`;
+        }
       }
+    } catch (err) {
+      console.warn(`Slug uniqueness check failed (${ep}): ${err.message}`);
     }
   }
   return slug;
 }
 
 async function matchCategoryIds(names) {
-  const res = await wp('/wp-json/wp/v2/categories?per_page=100');
-  if (!res.ok) return [];
-  const cats = await res.json();
-  const ids = [];
-  for (const name of names) {
-    const hit = cats.find((c) => c.name.toLowerCase() === name.toLowerCase());
-    if (hit) ids.push(hit.id);
+  try {
+    const res = await wp('/wp-json/wp/v2/categories?per_page=100', {
+      label: 'WP categories',
+      retries: 3,
+    });
+    if (!res.ok) return [];
+    const cats = await res.json();
+    const ids = [];
+    for (const name of names) {
+      const hit = cats.find((c) => c.name.toLowerCase() === name.toLowerCase());
+      if (hit) ids.push(hit.id);
+    }
+    return ids;
+  } catch (err) {
+    console.warn(`Kategori eşlemesi başarısız: ${err.message} — default kategori kullanılacak.`);
+    return [];
   }
-  return ids;
 }
 
 async function ensureTagId(name) {
   try {
-    const res = await wp(`/wp-json/wp/v2/tags?search=${encodeURIComponent(name)}&per_page=100`);
+    const res = await wp(`/wp-json/wp/v2/tags?search=${encodeURIComponent(name)}&per_page=100`, {
+      label: 'WP tags search',
+      retries: 3,
+    });
     if (res.ok) {
       const items = await res.json();
       const exact = items.find((t) => t.name.toLowerCase() === name.toLowerCase());
@@ -302,6 +397,9 @@ async function ensureTagId(name) {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name }),
+      label: 'WP tag create',
+      retries: 3,
+      retryOn403Html: true,
     });
     if (create.ok) return (await create.json()).id;
   } catch {
@@ -333,9 +431,98 @@ function buildContent(article, topic) {
   return `${article.bodyHtml}\n\n${faqHtml}\n\n${disclaimer}${schemaBlock}`;
 }
 
+/**
+ * Publish with retries. On transient 403/5xx/network, re-check slug before re-POSTing
+ * to avoid duplicate posts if the first POST actually succeeded server-side.
+ */
+async function publishPost(payload) {
+  const maxAttempts = 3;
+  let lastErr;
+
+  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+    // Idempotency: if a post with this slug already exists, reuse it.
+    const existing = await findPostsBySlug(payload.slug);
+    if (existing.length) {
+      console.log(
+        `WordPress publish: existing post found for slug "${payload.slug}" (id=${existing[0].id}) — skipping duplicate POST`,
+      );
+      return existing[0];
+    }
+
+    try {
+      console.log(`WordPress publish: POST attempt ${attempt}/${maxAttempts}`);
+      const res = await wp('/wp-json/wp/v2/posts', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+        label: 'WP publish',
+        retries: 1, // outer loop handles retries with slug re-check
+        retryOn403Html: false,
+        timeoutMs: 60000,
+      });
+
+      if (res.ok) {
+        const post = await res.json();
+        console.log(`WordPress publish: POST attempt ${attempt}/${maxAttempts} → ${res.status} ✓`);
+        return post;
+      }
+
+      // Should rarely reach here because fetchWithRetry throws on !ok with retries:1
+      const contentType = res.headers.get('content-type') || '';
+      const bodyPreview = (await res.text()).slice(0, 300);
+      const kind = classifyHttpError(res.status, contentType, bodyPreview);
+      const err = new Error(`WordPress'e gönderim başarısız (${res.status}, ${kind})`);
+      err.errorType = kind === 'AUTH_FAILURE' ? 'WORDPRESS_AUTH' : kind === 'TEMPORARY_WAF_OR_CDN_BLOCK' ? 'WORDPRESS_TEMPORARY_403' : 'WORDPRESS_HTTP';
+      err.status = res.status;
+      err.contentType = contentType;
+      err.bodyPreview = bodyPreview;
+      throw err;
+    } catch (err) {
+      lastErr = err;
+      const type = err.errorType || 'WORDPRESS_HTTP';
+      const status = err.status || '?';
+      const ct = err.contentType || '';
+      console.warn(
+        `WordPress publish: attempt ${attempt}/${maxAttempts} → status=${status} type=${type} content-type=${ct || 'n/a'}`,
+      );
+      if (err.bodyPreview) {
+        console.warn(`WordPress response preview: ${String(err.bodyPreview).replace(/\s+/g, ' ').slice(0, 300)}`);
+      }
+      if (type === 'TEMPORARY_WAF_OR_CDN_BLOCK') {
+        console.warn('WordPress API returned HTML instead of JSON — Possible firewall/CDN/WAF temporary challenge');
+      }
+
+      if (type === 'AUTH_FAILURE' || type === 'WORDPRESS_AUTH') {
+        err.errorType = 'WORDPRESS_AUTH';
+        throw err;
+      }
+
+      const retryable =
+        type === 'TEMPORARY_WAF_OR_CDN_BLOCK' ||
+        type === 'TRANSIENT_HTTP' ||
+        type === 'NETWORK_TRANSIENT' ||
+        type === 'WORDPRESS_TEMPORARY_403' ||
+        /fetch failed|network|timeout|503|502|429|408/i.test(String(err.message));
+
+      if (!retryable || attempt >= maxAttempts) {
+        err.errorType =
+          type === 'TEMPORARY_WAF_OR_CDN_BLOCK' ? 'WORDPRESS_TEMPORARY_403' : type || 'WORDPRESS_FAILED';
+        throw err;
+      }
+
+      const wait = WP_PUBLISH_RETRY_DELAYS_MS[attempt - 1] || 30000;
+      console.warn(`waiting ${Math.round(wait / 1000)}s before publish retry...`);
+      await sleep(wait);
+    }
+  }
+
+  throw lastErr || new Error('WordPress publish failed');
+}
+
 async function main() {
   checkEnv();
 
+  console.log('[1/6] Ortam kontrolü tamam');
   console.log(`WordPress: ${WP_BASE_URL} | Durum: ${WP_POST_STATUS} | Gemini model: ${getGeminiModel()}`);
 
   const history = loadHistory();
@@ -345,8 +532,35 @@ async function main() {
     saveLastRun({ ranAt: new Date().toISOString(), result: 'no-topic' });
     return;
   }
-  console.log(`Seçilen konu: ${topic.id} — ${topic.title}`);
+  console.log(`[2/6] Konu seçildi: ${topic.id} — ${topic.title}`);
 
+  // Re-run / race guard: if slug already published, mark history and exit cleanly
+  const already = await findPostsBySlug(topic.slug);
+  if (already.length) {
+    console.log(
+      `Slug "${topic.slug}" zaten WordPress'te var (id=${already[0].id}). Duplicate üretimi atlanıyor; history güncelleniyor.`,
+    );
+    if (!history.usedTopicIds.includes(topic.id)) {
+      history.usedTopicIds.push(topic.id);
+      history.articles.push({
+        topicId: topic.id,
+        wpId: already[0].id,
+        title: already[0].title?.rendered || topic.title,
+        slug: already[0].slug || topic.slug,
+        url: already[0].link,
+        status: already[0].status,
+        focusKeyword: topic.focusKeyword,
+        date: new Date().toISOString(),
+        note: 'pre-existing-on-rerun',
+      });
+      saveHistory(history);
+    }
+    saveLastRun({ ranAt: new Date().toISOString(), result: 'already-exists', topicId: topic.id, wpId: already[0].id });
+    console.log('[6/6] History güncellendi (pre-existing)');
+    return;
+  }
+
+  console.log('[3/6] Gemini makale üretimi');
   const internalLinks = await fetchInternalLinks();
   console.log(`İç link adayı: ${internalLinks.length} mevcut içerik bulundu.`);
 
@@ -366,16 +580,20 @@ async function main() {
   }
 
   if (!article.title && !topic.title) {
-    throw new Error('Başlık üretilemedi — teknik hata');
+    throw Object.assign(new Error('Başlık üretilemedi — teknik hata'), { errorType: 'GEMINI_INVALID_SCHEMA' });
   }
+
+  console.log('[4/6] Makale doğrulandı');
+  console.log(`      Words: ${article._wordCount}`);
+  console.log(`      FAQ: ${(article.faq || []).length}`);
 
   const slug = await ensureUniqueSlug(topic.slug);
   const content = buildContent(article, topic);
   if (!String(content).trim()) {
-    throw new Error('Birleştirilmiş içerik boş — teknik hata');
+    throw Object.assign(new Error('Birleştirilmiş içerik boş — teknik hata'), { errorType: 'GEMINI_INVALID_SCHEMA' });
   }
   const internalLinkCount = (content.match(/href="https?:\/\/[^"]*adanabosanmaavukati\.org/gi) || []).length;
-  console.log(`Gövdedeki iç link sayısı: ${internalLinkCount}`);
+  console.log(`      Internal links: ${internalLinkCount}`);
   if (internalLinkCount === 0) {
     warnQuality('Gövdeye site içi link eklenemedi (0 iç link). Yayın devam ediyor.');
   }
@@ -402,19 +620,12 @@ async function main() {
       rank_math_focus_keyword: topic.focusKeyword,
     },
   };
-  if (categoryIds.length) payload.categories = categoryIds; // yoksa WordPress default kategoriyi kullanır
+  if (categoryIds.length) payload.categories = categoryIds;
   if (focusTagId) payload.tags = [focusTagId];
 
-  const res = await wp('/wp-json/wp/v2/posts', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(payload),
-  });
-  if (!res.ok) {
-    const errText = await res.text();
-    throw new Error(`WordPress'e gönderim başarısız (${res.status}): ${errText.slice(0, 300)}`);
-  }
-  const post = await res.json();
+  // Article payload is ready — publish retries reuse this payload (no Gemini re-call).
+  console.log('[5/6] WordPress publish');
+  const post = await publishPost(payload);
 
   const record = {
     topicId: topic.id,
@@ -430,15 +641,20 @@ async function main() {
     date: new Date().toISOString(),
   };
 
+  // History ONLY after confirmed WP success
   history.usedTopicIds.push(topic.id);
   history.articles.push(record);
   saveHistory(history);
   saveLastRun({ ranAt: new Date().toISOString(), result: 'ok', ...record });
 
+  console.log('[6/6] History güncellendi');
   console.log('\n=== TAMAMLANDI ===');
   console.log(JSON.stringify(record, null, 2));
 }
 
-main().catch((err) => {
-  fail(err.message);
-});
+const isDirectRun = process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href;
+if (isDirectRun) {
+  main().catch((err) => {
+    fail(err.message, err.errorType || 'UNKNOWN');
+  });
+}
