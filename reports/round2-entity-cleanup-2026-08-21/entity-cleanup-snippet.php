@@ -1,21 +1,26 @@
 <?php
 /**
  * Plugin Name: CSC Round 2 entity cleanup
- * Description: Profil sayfasında tek H1; Rank Math Person @id birleştirme. Site genelinde Rank Math kapatılmaz.
+ * Description: Profil sayfasında tek H1 ve Rank Math Person @id birleştirme.
+ * Rank Math global disable = NO. Article.author site genelinde değiştirilmez.
  */
 if (!defined('ABSPATH')) {
     exit;
 }
 
+function csc_is_ceren_profile_page() {
+    return is_page(15) || is_page('avukat-ceren-sumer-cilli');
+}
+
 add_filter('astra_the_title_enabled', function ($enabled) {
-    if (is_page(15) || is_page('avukat-ceren-sumer-cilli')) {
+    if (csc_is_ceren_profile_page()) {
         return false;
     }
     return $enabled;
 });
 
 add_filter('rank_math/json_ld', function ($data, $jsonld) {
-    if (!is_array($data)) {
+    if (!is_array($data) || !csc_is_ceren_profile_page()) {
         return $data;
     }
     $person_id = 'https://adanabosanmaavukati.org/avukat-ceren-sumer-cilli/#person';
@@ -31,14 +36,14 @@ add_filter('rank_math/json_ld', function ($data, $jsonld) {
         if (in_array('Person', $types, true)) {
             $id = isset($node['@id']) ? (string) $node['@id'] : '';
             $name = isset($node['name']) ? (string) $node['name'] : '';
-            $looks_ceren = (stripos($name, 'Ceren') !== false)
-                || (strpos($id, 'ceren') !== false)
-                || (strpos($id, '/author/') !== false)
-                || (strpos($id, '#schema-') !== false);
-            if ($looks_ceren) {
+            $looks_duplicate = (stripos($name, 'Ceren') !== false)
+                || (strpos($id, '#schema-') !== false)
+                || (strpos($id, 'avukat-ceren-sumer-cilli') !== false);
+            if ($looks_duplicate) {
                 $node['@type'] = 'Person';
                 $node['@id'] = $person_id;
                 $node['name'] = $schema_name;
+                $node['jobTitle'] = 'Avukat';
                 if (empty($node['url']) || strpos((string) $node['url'], '/author/') !== false) {
                     $node['url'] = $profile_url;
                 }
