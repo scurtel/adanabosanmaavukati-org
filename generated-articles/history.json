@@ -20,7 +20,8 @@
     "siddetli-gecimsizlik",
     "bosanma-sgk-tazminat",
     "anlasmali-protokol",
-    "nafaka-artirim"
+    "nafaka-artirim",
+    "velayetin-degistirilmesi"
   ],
   "articles": [
     {
@@ -294,6 +295,19 @@
       "faqCount": 5,
       "internalLinkCount": 6,
       "date": "2026-08-21T03:07:37.408Z"
+    },
+    {
+      "topicId": "velayetin-degistirilmesi",
+      "wpId": 271,
+      "title": "Velayetin Değiştirilmesi Davası: Şartları ve Süreci",
+      "slug": "velayetin-degistirilmesi-davasi-ve-sartlari",
+      "url": "https://adanabosanmaavukati.org/velayetin-degistirilmesi-davasi-ve-sartlari/",
+      "status": "publish",
+      "focusKeyword": "velayetin değiştirilmesi",
+      "wordCount": 1343,
+      "faqCount": 4,
+      "internalLinkCount": 7,
+      "date": "2026-08-24T03:07:47.028Z"
     }
   ]
 }
