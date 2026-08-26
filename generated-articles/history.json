@@ -21,7 +21,8 @@
     "bosanma-sgk-tazminat",
     "anlasmali-protokol",
     "nafaka-artirim",
-    "velayetin-degistirilmesi"
+    "velayetin-degistirilmesi",
+    "mal-rejimi"
   ],
   "articles": [
     {
@@ -308,6 +309,19 @@
       "faqCount": 4,
       "internalLinkCount": 7,
       "date": "2026-08-24T03:07:47.028Z"
+    },
+    {
+      "topicId": "mal-rejimi",
+      "wpId": 280,
+      "title": "Edinilmiş Mallara Katılma Rejimi ve İstisnaları",
+      "slug": "edinilmis-mallara-katilma-rejimi-ve-istisnalari",
+      "url": "https://adanabosanmaavukati.org/edinilmis-mallara-katilma-rejimi-ve-istisnalari/",
+      "status": "publish",
+      "focusKeyword": "mal rejimi",
+      "wordCount": 1247,
+      "faqCount": 5,
+      "internalLinkCount": 6,
+      "date": "2026-08-26T03:10:26.522Z"
     }
   ]
 }
