@@ -22,7 +22,8 @@
     "anlasmali-protokol",
     "nafaka-artirim",
     "velayetin-degistirilmesi",
-    "mal-rejimi"
+    "mal-rejimi",
+    "tanima-tenfiz"
   ],
   "articles": [
     {
@@ -322,6 +323,19 @@
       "faqCount": 5,
       "internalLinkCount": 6,
       "date": "2026-08-26T03:10:26.522Z"
+    },
+    {
+      "topicId": "tanima-tenfiz",
+      "wpId": 283,
+      "title": "Yabancı Mahkeme Boşanma Kararının Türkiye&#8217;de Tanınması ve Tenfizi",
+      "slug": "yabanci-bosanma-kararinin-taninmasi-ve-tenfizi",
+      "url": "https://adanabosanmaavukati.org/yabanci-bosanma-kararinin-taninmasi-ve-tenfizi/",
+      "status": "publish",
+      "focusKeyword": "boşanma kararı tanıma tenfiz",
+      "wordCount": 1418,
+      "faqCount": 4,
+      "internalLinkCount": 7,
+      "date": "2026-08-28T14:10:46.483Z"
     }
   ]
 }
