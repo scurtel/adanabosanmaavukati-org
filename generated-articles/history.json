@@ -23,7 +23,8 @@
     "nafaka-artirim",
     "velayetin-degistirilmesi",
     "mal-rejimi",
-    "tanima-tenfiz"
+    "tanima-tenfiz",
+    "bosanma-masraflari"
   ],
   "articles": [
     {
@@ -336,6 +337,19 @@
       "faqCount": 4,
       "internalLinkCount": 7,
       "date": "2026-08-28T14:10:46.483Z"
+    },
+    {
+      "topicId": "bosanma-masraflari",
+      "wpId": 285,
+      "title": "Boşanma Davası Masrafları ve Yargılama Süreci",
+      "slug": "bosanma-davasi-masraflari-ve-yargilama-sureci",
+      "url": "https://adanabosanmaavukati.org/bosanma-davasi-masraflari-ve-yargilama-sureci/",
+      "status": "publish",
+      "focusKeyword": "boşanma davası masrafları",
+      "wordCount": 1249,
+      "faqCount": 5,
+      "internalLinkCount": 7,
+      "date": "2026-08-31T08:24:31.076Z"
     }
   ]
 }
