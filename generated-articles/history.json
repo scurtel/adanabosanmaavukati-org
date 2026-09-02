@@ -24,7 +24,8 @@
     "velayetin-degistirilmesi",
     "mal-rejimi",
     "tanima-tenfiz",
-    "bosanma-masraflari"
+    "bosanma-masraflari",
+    "cekismeli-sure"
   ],
   "articles": [
     {
@@ -350,6 +351,19 @@
       "faqCount": 5,
       "internalLinkCount": 7,
       "date": "2026-08-31T08:24:31.076Z"
+    },
+    {
+      "topicId": "cekismeli-sure",
+      "wpId": 286,
+      "title": "Çekişmeli Boşanma Ne Kadar Sürer? Süreci Etkileyen Faktörler",
+      "slug": "cekismeli-bosanma-ne-kadar-surer-etkileyen-faktorler",
+      "url": "https://adanabosanmaavukati.org/cekismeli-bosanma-ne-kadar-surer-etkileyen-faktorler/",
+      "status": "publish",
+      "focusKeyword": "çekişmeli boşanma süresi",
+      "wordCount": 1245,
+      "faqCount": 4,
+      "internalLinkCount": 8,
+      "date": "2026-09-02T06:57:48.757Z"
     }
   ]
 }
