@@ -73,6 +73,16 @@ const TOPICS = [
   { id: 'tanima-tenfiz', title: "Yabancı Mahkeme Boşanma Kararının Türkiye'de Tanınması ve Tenfizi", slug: 'yabanci-bosanma-kararinin-taninmasi-ve-tenfizi', focusKeyword: 'boşanma kararı tanıma tenfiz', categories: ['Boşanma Davaları', 'Aile Hukuku'] },
   { id: 'bosanma-masraflari', title: "Boşanma Davası Masrafları ve Yargılama Süreci", slug: 'bosanma-davasi-masraflari-ve-yargilama-sureci', focusKeyword: 'boşanma davası masrafları', categories: ['Boşanma Davaları', 'Aile Hukuku'] },
   { id: 'cekismeli-sure', title: "Çekişmeli Boşanma Ne Kadar Sürer? Süreci Etkileyen Faktörler", slug: 'cekismeli-bosanma-ne-kadar-surer-etkileyen-faktorler', focusKeyword: 'çekişmeli boşanma süresi', categories: ['Boşanma Davaları', 'Aile Hukuku'] },
+
+  // --- 2026 Yeni Otorite Konuları (Boşanma, Velayet, Mal Rejimi, Ortaklığın Giderilmesi) ---
+  { id: 'izale-i-suyu-tasinmaz-satisi', title: "Miras Kalan Taşınmazlarda Ortaklığın Giderilmesi (İzale-i Şüyu) ve Satış Süreci", slug: 'miras-kalan-tasinmazlarda-ortakligin-giderilmesi-izale-i-suyu', focusKeyword: 'Adana ortaklığın giderilmesi avukatı', categories: ['Mal Paylaşımı', 'Aile Hukuku'] },
+  { id: 'ortakligin-giderilmesinde-on-alim', title: "Hisseli Gayrimenkullerde Önalım (Şüfa) Hakkı ve İzale-i Şüyu İlişkisi", slug: 'hisseli-gayrimenkullerde-on-alim-sufa-hakki-ve-izale-i-suyu', focusKeyword: 'ortaklığın giderilmesi şüfa hakkı', categories: ['Mal Paylaşımı', 'Aile Hukuku'] },
+  { id: 'bosanmada-sirket-hisseleri', title: "Boşanmada Şirket Hisselerinin ve Ticari Kazancın Mal Rejimi Tasfiyesi", slug: 'bosanmada-sirket-hisseleri-ve-ticari-kazanc-tasfiyesi', focusKeyword: 'boşanmada şirket hissesi paylaşımı', categories: ['Mal Paylaşımı', 'Aile Hukuku'] },
+  { id: 'evlilik-oncesi-sonrasi-ev-araba', title: "Evlilik Öncesi ve Sonrası Alınan Taşınmaz ve Araçların Boşanmada Paylaşımı", slug: 'evlilik-oncesi-ve-sonrasi-alinan-ev-araba-mal-paylasimi', focusKeyword: 'boşanmada ev ve araba paylaşımı', categories: ['Mal Paylaşımı', 'Aile Hukuku'] },
+  { id: 'idrak-cagindaki-cocugun-velayeti', title: "İdrak Çağındaki Çocuğun Velayet Davasında Mahkemede Dinlenmesi ve Görüşü", slug: 'idrak-cagindaki-cocugun-velayeti-ve-mahkemede-dinlenmesi', focusKeyword: 'idrak çağı velayet', categories: ['Velayet', 'Aile Hukuku'] },
+  { id: 'ortak-velayet-sartlari', title: "Türk Hukukunda Ortak Velayet Şartları, Haklar ve Yargıtay Uygulaması", slug: 'turk-hukukunda-ortak-velayet-sartlari-ve-uygulamasi', focusKeyword: 'ortak velayet', categories: ['Velayet', 'Aile Hukuku'] },
+  { id: 'anlasmali-bosanma-masraflari-2026', title: "Adana'da Anlaşmalı Boşanma Masrafları ve Dava Harçları (2026)", slug: 'adanada-anlasmali-bosanma-masraflari-ve-harclar', focusKeyword: 'Adana anlaşmalı boşanma masrafları', categories: ['Boşanma Davaları', 'Aile Hukuku'] },
+  { id: 'bosanmada-whatsapp-kayitlari-delil', title: "Boşanma Davasında WhatsApp Mesajları ve Ses Kayıtlarının Hukuki Delil Değeri", slug: 'bosanma-davasinda-whatsapp-mesajlari-ve-delil-degeri', focusKeyword: 'boşanmada whatsapp delil', categories: ['Boşanma Davaları', 'Aile Hukuku'] },
 ];
 
 function warnQuality(message) {
@@ -161,6 +171,13 @@ KURALLAR:
 - Adana yerel bağlamını (aile mahkemeleri, yerel süreç) doğal şekilde geç.
 - Hukuki bilgi ver ama kesin sonuç, kesin süre, garanti başarı veya kazanma vaadi VERME.
 - Av. Ceren Sümer Cilli'ye doğal, abartısız, güven veren biçimde en fazla 1-2 kez atıf yapılabilir.
+- Hukuki Otorite ve Editoryal Referans (E-E-A-T): Konuyla doğrudan örtüşüyorsa, Avukat Ceren Sümer Cilli'nin ilgili temel rehberine metin akışında 1 adet doğal editoryal kaynak atfı ver:
+  * Boşanma usulü ve dava açılışı için: <a href="https://www.cerensumer.av.tr/adana-bosanma-avukati/">Adana boşanma avukatı</a>
+  * Anlaşmalı protokol için: <a href="https://www.cerensumer.av.tr/anlasmali-bosanma-protokolu/">anlaşmalı boşanma protokolü</a>
+  * Velayet ve yaş grupları için: <a href="https://www.cerensumer.av.tr/bosanirken-cocugun-velayeti-kime-verilir/">boşanırken çocuğun velayeti</a>
+  * Mal paylaşımı ve tasfiye için: <a href="https://www.cerensumer.av.tr/bosanmada-mal-paylasimi-nasil-yapilir/">boşanmada mal paylaşımı davası</a>
+  * Hisseli taşınmaz ve izale-i şüyu için: <a href="https://www.cerensumer.av.tr/adana-ortakligin-giderilmesi-davasi/">ortaklığın giderilmesi davası</a>
+  * Ziynet ve altın alacağı için: <a href="https://www.cerensumer.av.tr/dugun-takilari-davasi/">ziynet alacağı davası</a>
 - Yasak ifadeler (KULLANMA): ${BANNED.join(', ')}.
 - En az 4 adet anlamlı SSS (FAQ) üret.
 - Hukuki uyarı cümlesini metne EKLEME; sistem otomatik ekleyecek.
@@ -415,7 +432,7 @@ function buildContent(article, topic) {
     faqItems.map((f) => `<h3>${f.question}</h3>\n<p>${f.answer}</p>`).join('\n');
 
   const disclaimer =
-    '<p style="margin-top:1.5em;font-size:0.95em;color:#555;"><em>Bu yazı genel bilgilendirme amaçlıdır ve hukuki tavsiye niteliği taşımaz. Her dava somut olayın koşullarına göre değişebilir; süreciniz hakkında <a href="https://adanabosanmaavukati.org/avukat-ceren-sumer-cilli/">Av. Ceren Sümer Cilli</a> ile görüşerek bilgi alabilirsiniz.</em></p>';
+    '<p style="margin-top:1.5em;font-size:0.95em;color:#555;"><em>Bu yazı genel bilgilendirme amaçlıdır ve hukuki tavsiye niteliği taşımaz. Her dava somut olayın koşullarına göre değişebilir; süreciniz hakkında detaylı bilgi için <a href="https://adanabosanmaavukati.org/avukat-ceren-sumer-cilli/">Av. Ceren Sümer Cilli</a> ile görüşebilir, kurumsal profil ve resmi yayınları <a href="https://www.cerensumer.av.tr/av-ceren-sumer-cilli/" target="_blank" rel="noopener">cerensumer.av.tr</a> üzerinden inceleyebilirsiniz.</em></p>';
 
   const faqSchema = {
     '@context': 'https://schema.org',
