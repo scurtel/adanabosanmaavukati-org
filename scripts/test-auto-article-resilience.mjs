@@ -5,7 +5,7 @@
  */
 import { parseGeminiJsonText } from './lib/gemini.mjs';
 import { classifyHttpError, isTransientNetworkError, backoffMs } from './lib/fetch-retry.mjs';
-import { validateArticlePayload } from './lib/article-schema.mjs';
+import { validateArticlePayload, publicContentBySlugPath, isSafeArticleSlug } from './lib/article-schema.mjs';
 
 let passed = 0;
 let failed = 0;
@@ -105,6 +105,23 @@ function assert(name, cond, detail = '') {
     ],
   });
   assert('G long article still schema-valid (word count not hard fail)', longOk.length === 0);
+}
+
+{
+  const path = publicContentBySlugPath('posts', 'adanada-velayet-davasi');
+  assert(
+    'slug lookup uses publish-only status',
+    path.includes('status=publish') && !path.includes('private') && !path.includes('draft'),
+  );
+  assert('safe slug accepted', isSafeArticleSlug('adanada-velayet-davasi'));
+  assert('unsafe slug rejected', !isSafeArticleSlug('Adana: Velayet') && !isSafeArticleSlug(''));
+  const colonTitle = validateArticlePayload({
+    title: "Adana'da nafaka: artırım ve azaltım",
+    bodyHtml: '<p>Gövde</p>',
+    slug: 'adanada-nafaka-artirim',
+    faq: [{ question: 'S?', answer: 'C.' }],
+  });
+  assert('colon in title is allowed in JSON payload', colonTitle.length === 0);
 }
 
 console.log(`\n${passed} passed, ${failed} failed`);

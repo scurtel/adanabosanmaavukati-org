@@ -9,7 +9,7 @@ import { fileURLToPath, pathToFileURL } from 'url';
 // lib/gemini.mjs import edildiğinde lib/env.mjs üzerinden .env (varsa) yüklenir.
 import { callGemini, getGeminiModel } from './lib/gemini.mjs';
 import { fetchWithRetry, sleep, classifyHttpError } from './lib/fetch-retry.mjs';
-import { validateArticlePayload } from './lib/article-schema.mjs';
+import { validateArticlePayload, publicContentBySlugPath, sanitizeArticleTitle, isSafeArticleSlug } from './lib/article-schema.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
@@ -27,6 +27,10 @@ const WP_USERNAME = process.env.WP_USERNAME || process.env.ADANABOSANMA_WP_USERN
 const WP_APPLICATION_PASSWORD =
   process.env.WP_APPLICATION_PASSWORD || process.env.ADANABOSANMA_WP_APP_PASSWORD;
 const WP_POST_STATUS = process.env.WP_POST_STATUS || 'publish';
+const VALIDATE_POOL =
+  process.env.AUTO_ARTICLE_VALIDATE_POOL === 'true' ||
+  process.env.AUTO_ARTICLE_VALIDATE_POOL === '1' ||
+  process.argv.includes('--validate-pool');
 const GEMINI_API_KEY =
   process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY || process.env.GOOGLE_GEMINI_API_KEY;
 
@@ -97,7 +101,7 @@ function fail(message, errorType = 'UNKNOWN') {
 
 function checkEnv() {
   const missing = [];
-  if (!GEMINI_API_KEY) missing.push('GEMINI_API_KEY');
+  if (!GEMINI_API_KEY && !VALIDATE_POOL) missing.push('GEMINI_API_KEY');
   if (!WP_USERNAME) missing.push('WP_USERNAME (veya ADANABOSANMA_WP_USERNAME)');
   if (!WP_APPLICATION_PASSWORD) missing.push('WP_APPLICATION_PASSWORD (veya ADANABOSANMA_WP_APP_PASSWORD)');
   if (missing.length) {
@@ -108,6 +112,37 @@ function checkEnv() {
       'MISSING_ENV',
     );
   }
+}
+
+async function preflightWordpress() {
+  let res;
+  try {
+    res = await wp('/wp-json/wp/v2/users/me?context=edit', {
+      label: 'WP users/me',
+      retries: 2,
+      retryOn403Html: false,
+    });
+  } catch (err) {
+    const preview = String(err.bodyPreview || err.message || '');
+    if (err.status === 401 || err.errorType === 'AUTH_FAILURE' || /application_passwords_disabled|Uygulama parolaları/i.test(preview)) {
+      fail(
+        'WordPress Application Password kimliği reddedildi. Hostinger Tools → Security → “Disable application passwords” kapalı olmalı ve GitHub secret WP_APPLICATION_PASSWORD geçerli bir uygulama parolası olmalı.',
+        'WORDPRESS_AUTH',
+      );
+    }
+    throw err;
+  }
+
+  const me = await res.json();
+  const caps = me.capabilities || {};
+  if (!caps.publish_posts && !caps.edit_posts) {
+    fail(
+      `WordPress kullanıcısının yazı yayınlama yetkisi yok (id=${me.id || '?'}). Application Password Administrator veya Editor rolüne bağlı olmalı.`,
+      'WORDPRESS_AUTH',
+    );
+  }
+  console.log(`WordPress auth OK (id=${me.id})`);
+  return me;
 }
 
 function loadHistory() {
@@ -321,10 +356,11 @@ function decodeEntities(s) {
 
 async function findPostsBySlug(slug) {
   try {
-    const res = await wp(
-      `/wp-json/wp/v2/posts?slug=${encodeURIComponent(slug)}&status=publish,draft,pending,future,private&per_page=10`,
-      { label: `WP find slug ${slug}`, retries: 3, retryOn403Html: true },
-    );
+    const res = await wp(publicContentBySlugPath('posts', slug), {
+      label: `WP find slug ${slug}`,
+      retries: 3,
+      retryOn403Html: true,
+    });
     if (!res.ok) return [];
     const arr = await res.json();
     return Array.isArray(arr) ? arr : [];
@@ -359,12 +395,15 @@ async function fetchInternalLinks(limit = 40) {
 }
 
 async function ensureUniqueSlug(slug) {
+  if (!isSafeArticleSlug(slug)) {
+    throw Object.assign(new Error(`Geçersiz slug: ${slug || '(boş)'}`), { errorType: 'INVALID_SLUG' });
+  }
   for (const ep of ['posts', 'pages']) {
     try {
-      const res = await wp(
-        `/wp-json/wp/v2/${ep}?slug=${encodeURIComponent(slug)}&status=publish,draft,pending,future,private&per_page=100`,
-        { label: `WP unique-slug ${ep}`, retries: 3 },
-      );
+      const res = await wp(publicContentBySlugPath(ep, slug), {
+        label: `WP unique-slug ${ep}`,
+        retries: 3,
+      });
       if (res.ok) {
         const arr = await res.json();
         if (Array.isArray(arr) && arr.length) {
@@ -540,7 +579,9 @@ async function main() {
   checkEnv();
 
   console.log('[1/6] Ortam kontrolü tamam');
-  console.log(`WordPress: ${WP_BASE_URL} | Durum: ${WP_POST_STATUS} | Gemini model: ${getGeminiModel()}`);
+  console.log(`WordPress: ${WP_BASE_URL} | Durum: ${WP_POST_STATUS} | Gemini model: ${getGeminiModel()} | Validate pool: ${VALIDATE_POOL}`);
+
+  await preflightWordpress();
 
   const history = loadHistory();
   const topic = pickTopic(history);
@@ -550,6 +591,12 @@ async function main() {
     return;
   }
   console.log(`[2/6] Konu seçildi: ${topic.id} — ${topic.title}`);
+
+  if (VALIDATE_POOL) {
+    saveLastRun({ ranAt: new Date().toISOString(), result: 'validate-pool', topicId: topic.id });
+    console.log('Validate-pool: kullanılabilir konu ve WordPress auth doğrulandı; Gemini/publish atlandı.');
+    return;
+  }
 
   // Re-run / race guard: if slug already published, mark history and exit cleanly
   const already = await findPostsBySlug(topic.slug);
@@ -626,7 +673,7 @@ async function main() {
   const focusTagId = await ensureTagId(topic.focusKeyword);
 
   const payload = {
-    title: article.title || topic.title,
+    title: sanitizeArticleTitle(article.title || topic.title),
     slug,
     status: process.env.WP_POST_STATUS || 'publish',
     content,
