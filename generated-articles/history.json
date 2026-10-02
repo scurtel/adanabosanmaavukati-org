@@ -26,7 +26,8 @@
     "tanima-tenfiz",
     "bosanma-masraflari",
     "cekismeli-sure",
-    "izale-i-suyu-tasinmaz-satisi"
+    "izale-i-suyu-tasinmaz-satisi",
+    "ortakligin-giderilmesinde-on-alim"
   ],
   "articles": [
     {
@@ -378,6 +379,19 @@
       "faqCount": 4,
       "internalLinkCount": 5,
       "date": "2026-09-30T08:13:38.798Z"
+    },
+    {
+      "topicId": "ortakligin-giderilmesinde-on-alim",
+      "wpId": 305,
+      "title": "Hisseli Gayrimenkullerde Önalım (Şüfa) Hakkı ve İzale-i Şüyu İlişkisi",
+      "slug": "hisseli-gayrimenkullerde-on-alim-sufa-hakki-ve-izale-i-suyu",
+      "url": "https://adanabosanmaavukati.org/hisseli-gayrimenkullerde-on-alim-sufa-hakki-ve-izale-i-suyu/",
+      "status": "publish",
+      "focusKeyword": "ortaklığın giderilmesi şüfa hakkı",
+      "wordCount": 1462,
+      "faqCount": 5,
+      "internalLinkCount": 5,
+      "date": "2026-10-02T08:12:06.478Z"
     }
   ]
 }
