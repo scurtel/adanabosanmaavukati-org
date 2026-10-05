@@ -27,7 +27,8 @@
     "bosanma-masraflari",
     "cekismeli-sure",
     "izale-i-suyu-tasinmaz-satisi",
-    "ortakligin-giderilmesinde-on-alim"
+    "ortakligin-giderilmesinde-on-alim",
+    "bosanmada-sirket-hisseleri"
   ],
   "articles": [
     {
@@ -392,6 +393,19 @@
       "faqCount": 5,
       "internalLinkCount": 5,
       "date": "2026-10-02T08:12:06.478Z"
+    },
+    {
+      "topicId": "bosanmada-sirket-hisseleri",
+      "wpId": 306,
+      "title": "Boşanmada Şirket Hisseleri ve Ticari Kazancın Mal Rejimi Tasfiyesi",
+      "slug": "bosanmada-sirket-hisseleri-ve-ticari-kazanc-tasfiyesi",
+      "url": "https://adanabosanmaavukati.org/bosanmada-sirket-hisseleri-ve-ticari-kazanc-tasfiyesi/",
+      "status": "publish",
+      "focusKeyword": "boşanmada şirket hissesi paylaşımı",
+      "wordCount": 1390,
+      "faqCount": 4,
+      "internalLinkCount": 7,
+      "date": "2026-10-05T08:42:29.442Z"
     }
   ]
 }
