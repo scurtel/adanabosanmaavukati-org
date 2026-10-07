@@ -28,7 +28,8 @@
     "cekismeli-sure",
     "izale-i-suyu-tasinmaz-satisi",
     "ortakligin-giderilmesinde-on-alim",
-    "bosanmada-sirket-hisseleri"
+    "bosanmada-sirket-hisseleri",
+    "evlilik-oncesi-sonrasi-ev-araba"
   ],
   "articles": [
     {
@@ -406,6 +407,19 @@
       "faqCount": 4,
       "internalLinkCount": 7,
       "date": "2026-10-05T08:42:29.442Z"
+    },
+    {
+      "topicId": "evlilik-oncesi-sonrasi-ev-araba",
+      "wpId": 308,
+      "title": "Evlilik Öncesi ve Sonrası Alınan Taşınmaz ve Araçların Boşanmada Paylaşımı",
+      "slug": "evlilik-oncesi-ve-sonrasi-alinan-ev-araba-mal-paylasimi",
+      "url": "https://adanabosanmaavukati.org/evlilik-oncesi-ve-sonrasi-alinan-ev-araba-mal-paylasimi/",
+      "status": "publish",
+      "focusKeyword": "boşanmada ev ve araba paylaşımı",
+      "wordCount": 1270,
+      "faqCount": 4,
+      "internalLinkCount": 6,
+      "date": "2026-10-07T08:21:22.613Z"
     }
   ]
 }
