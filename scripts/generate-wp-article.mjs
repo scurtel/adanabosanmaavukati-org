@@ -678,7 +678,6 @@ async function main() {
     status: process.env.WP_POST_STATUS || 'publish',
     content,
     excerpt: article.excerpt || article.metaDescription || '',
-    author: 1, // Avukat Ceren Sümer Cilli
     meta: {
       rank_math_title: article.metaTitle || article.title,
       rank_math_description: article.metaDescription || article.excerpt,

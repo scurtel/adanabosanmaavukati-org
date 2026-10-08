@@ -27,22 +27,22 @@ loadDotEnv();
 
 export function getWpConfig() {
   const baseUrl = (
-    process.env.WP_BASE_URL ||
     process.env.ADANABOSANMA_WP_BASE_URL ||
     process.env.ADANAAVUKAT_WP_BASE_URL ||
     'https://adanabosanmaavukati.org'
   ).replace(/\/$/, '');
 
-  const username =
-    process.env.WP_USERNAME ||
-    process.env.ADANABOSANMA_WP_USERNAME ||
-    process.env.ADANAAVUKAT_WP_USERNAME ||
-    '';
-  const appPassword =
-    process.env.WP_APPLICATION_PASSWORD ||
-    process.env.ADANABOSANMA_WP_APP_PASSWORD ||
-    process.env.ADANAAVUKAT_WP_APP_PASSWORD ||
-    '';
+  let username =
+    process.env.ADANABOSANMA_WP_USERNAME || process.env.ADANAAVUKAT_WP_USERNAME;
+  let appPassword =
+    process.env.ADANABOSANMA_WP_APP_PASSWORD || process.env.ADANAAVUKAT_WP_APP_PASSWORD;
+
+  // Yaygın yapılandırma hatası: alanlar ters atanmışsa otomatik düzelt (değerler loglanmaz)
+  const looksLikeAppPassword = (v) => typeof v === 'string' && /^[A-Za-z0-9]{4}(\s[A-Za-z0-9]{4}){3,}$/.test(v.trim());
+  const looksLikeEmail = (v) => typeof v === 'string' && v.includes('@');
+  if (username && appPassword && looksLikeAppPassword(username) && looksLikeEmail(appPassword)) {
+    [username, appPassword] = [appPassword, username];
+  }
 
   return { baseUrl, username, appPassword };
 }
@@ -53,7 +53,7 @@ export function getGeminiConfig() {
       process.env.GEMINI_API_KEY ||
       process.env.GOOGLE_API_KEY ||
       process.env.GOOGLE_GEMINI_API_KEY,
-    model: process.env.GEMINI_MODEL || 'gemini-3.8-flash',
+    model: process.env.GEMINI_MODEL || 'gemini-2.5-flash',
     searchGrounding:
       process.env.GEMINI_GOOGLE_SEARCH_ENABLED === 'true' ||
       process.env.GEMINI_ENABLE_SEARCH_GROUNDING === 'true',
