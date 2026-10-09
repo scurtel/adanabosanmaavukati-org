@@ -29,7 +29,8 @@
     "izale-i-suyu-tasinmaz-satisi",
     "ortakligin-giderilmesinde-on-alim",
     "bosanmada-sirket-hisseleri",
-    "evlilik-oncesi-sonrasi-ev-araba"
+    "evlilik-oncesi-sonrasi-ev-araba",
+    "idrak-cagindaki-cocugun-velayeti"
   ],
   "articles": [
     {
@@ -420,6 +421,19 @@
       "faqCount": 4,
       "internalLinkCount": 6,
       "date": "2026-10-07T08:21:22.613Z"
+    },
+    {
+      "topicId": "idrak-cagindaki-cocugun-velayeti",
+      "wpId": 310,
+      "title": "İdrak Çağındaki Çocuğun Velayet Davasında Dinlenmesi ve Görüşü",
+      "slug": "idrak-cagindaki-cocugun-velayeti-ve-mahkemede-dinlenmesi",
+      "url": "https://adanabosanmaavukati.org/idrak-cagindaki-cocugun-velayeti-ve-mahkemede-dinlenmesi/",
+      "status": "publish",
+      "focusKeyword": "idrak çağı velayet",
+      "wordCount": 1338,
+      "faqCount": 4,
+      "internalLinkCount": 6,
+      "date": "2026-10-09T08:44:38.540Z"
     }
   ]
 }
