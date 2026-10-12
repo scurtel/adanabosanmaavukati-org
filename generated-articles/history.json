@@ -30,7 +30,8 @@
     "ortakligin-giderilmesinde-on-alim",
     "bosanmada-sirket-hisseleri",
     "evlilik-oncesi-sonrasi-ev-araba",
-    "idrak-cagindaki-cocugun-velayeti"
+    "idrak-cagindaki-cocugun-velayeti",
+    "ortak-velayet-sartlari"
   ],
   "articles": [
     {
@@ -434,6 +435,19 @@
       "faqCount": 4,
       "internalLinkCount": 6,
       "date": "2026-10-09T08:44:38.540Z"
+    },
+    {
+      "topicId": "ortak-velayet-sartlari",
+      "wpId": 320,
+      "title": "Türk Hukukunda Ortak Velayet: Şartları, Haklar ve Yargıtay Uygulaması",
+      "slug": "turk-hukukunda-ortak-velayet-sartlari-ve-uygulamasi",
+      "url": "https://adanabosanmaavukati.org/turk-hukukunda-ortak-velayet-sartlari-ve-uygulamasi/",
+      "status": "publish",
+      "focusKeyword": "ortak velayet",
+      "wordCount": 1397,
+      "faqCount": 4,
+      "internalLinkCount": 7,
+      "date": "2026-10-12T08:52:57.666Z"
     }
   ]
 }
