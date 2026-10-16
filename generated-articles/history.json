@@ -32,7 +32,8 @@
     "evlilik-oncesi-sonrasi-ev-araba",
     "idrak-cagindaki-cocugun-velayeti",
     "ortak-velayet-sartlari",
-    "anlasmali-bosanma-masraflari-2026"
+    "anlasmali-bosanma-masraflari-2026",
+    "bosanmada-whatsapp-kayitlari-delil"
   ],
   "articles": [
     {
@@ -462,6 +463,19 @@
       "faqCount": 4,
       "internalLinkCount": 8,
       "date": "2026-10-14T07:19:07.086Z"
+    },
+    {
+      "topicId": "bosanmada-whatsapp-kayitlari-delil",
+      "wpId": 322,
+      "title": "Boşanma Davasında WhatsApp ve Ses Kayıtlarının Delil Değeri",
+      "slug": "bosanma-davasinda-whatsapp-mesajlari-ve-delil-degeri",
+      "url": "https://adanabosanmaavukati.org/bosanma-davasinda-whatsapp-mesajlari-ve-delil-degeri/",
+      "status": "publish",
+      "focusKeyword": "boşanmada whatsapp delil",
+      "wordCount": 1312,
+      "faqCount": 4,
+      "internalLinkCount": 6,
+      "date": "2026-10-16T06:53:51.446Z"
     }
   ]
 }
